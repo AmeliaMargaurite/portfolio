@@ -1,0 +1,66 @@
+:root,
+*:before,
+*:after {
+	--mix-colors-cyan: #10a1a3;
+	--mix-colors-aqua: #24ac82;
+	--mix-colors-green: #6cb14f;
+	--mix-colors-yellow: #b3ac0b;
+	--mix-colors-orange: #ff9603;
+
+	--blue800: #10a1a3;
+	--blue700: #48adb0;
+	--blue600: #6ababe;
+	--blue500: #87c6ca;
+	--blue400: #a3d3d7;
+	--blue300: #bee0e3;
+	--blue200: #d8ecef;
+	--blue100: #f2f9fa;
+
+	--aqua800: #24ac82;
+	--aqua700: #48b693;
+	--aqua600: #64c1a3;
+	--aqua500: #7ecbb3;
+	--aqua400: #97d5c3;
+	--aqua300: #b0dfd2;
+	--aqua200: #c8e8e0;
+	--aqua100: #e1f2ee;
+
+	--grey800: #2e2e2e;
+	--grey700: #484848;
+	--grey600: #636363;
+	--grey500: #808080;
+	--grey400: #9e9e9e;
+	--grey300: #bebebe;
+	--grey200: #dedede;
+	--grey100: #ffffff;
+
+	--light: var(--grey100);
+	--dark: var(--grey800);
+	--primary: var(--dark);
+	--secondary: var(--light);
+	--link: var(--aqua800);
+
+	--menu-zIndex: 5;
+	--menu-btn-zIndex: 10;
+
+	@media (prefers-color-scheme: dark) {
+		--primary: var(--light);
+		--secondary: var(--dark);
+	}
+
+	@media (prefers-color-scheme: light) {
+		--primary: var(--dark);
+		--secondary: var(--light);
+	}
+}
+
+// BREAKPOINTS
+
+$xxsmall: 425px;
+$xsmall: 501px;
+$small: 768px;
+$medium: 1024px;
+$large: 1440px;
+$xlarge: 2560px;
+
+$wholeMenuMinWidth: $small;

@@ -1,0 +1,17 @@
+.home {
+	.project-card__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: 2.4rem;
+		column-gap: 2.4rem;
+
+		@media (min-width: $small) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (min-width: $medium) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}
