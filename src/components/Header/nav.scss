@@ -18,12 +18,12 @@ nav {
 				text-transform: uppercase;
 				font-weight: 600;
 				text-decoration: none;
+				color: var(--primary);
 
 				&:after {
 					position: absolute;
 					content: "";
 					height: 0.1em;
-					background: var(--link);
 					width: 100%;
 					left: 0;
 					bottom: 0;
@@ -33,7 +33,7 @@ nav {
 					background: var(--mix-colors-orange);
 				}
 
-				&:hover {
+				&:not(.active):hover {
 					&:after {
 						background: var(--primary);
 					}
@@ -47,21 +47,22 @@ nav {
 		bottom: 0;
 		left: 0;
 		right: 0;
-		background: radial-gradient(
-			circle at 40% 120%,
-			#2e2e2e,
-			#2e2e2e,
-			#2c2d2d,
-			#2a2d2c,
-			#282c2b,
-			#252b2a,
-			#222928,
-			#1f2827,
-			#1c2726,
-			#1a2725,
-			#192624,
-			#182624
-		);
+		// background: radial-gradient(
+		// 	circle at 40% 120%,
+		// 	#2e2e2e,
+		// 	#2e2e2e,
+		// 	#2e2e2f,
+		// 	#2e2e2f,
+		// 	#2e2f30,
+		// 	#2e2f31,
+		// 	#2e2f33,
+		// 	#2e2f34,
+		// 	#2e3035,
+		// 	#2e3035,
+		// 	#2e3036,
+		// 	#2e3036
+		// );
+		background: var(--dark);
 		z-index: var(--menu-zIndex);
 		ul {
 			display: flex;

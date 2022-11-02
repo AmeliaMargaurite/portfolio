@@ -1,0 +1,28 @@
+@import "../../scss/variables";
+
+main.resume {
+	background-image: linear-gradient(45deg, #eeeeeeab, #ffffff);
+	color: var(--dark);
+
+	font-family: monospace;
+	line-height: 1.75;
+
+	a {
+		color: var(--aqua400);
+	}
+
+	@media (min-width: $small) {
+		margin: 0 3.2rem;
+	}
+
+	.resume__section {
+		padding: 1.6rem 0;
+		border-bottom: 4px solid var(--dark);
+		row-gap: 2rem;
+	}
+
+	.content-wrapper {
+		display: grid;
+		row-gap: 1.6rem;
+	}
+}

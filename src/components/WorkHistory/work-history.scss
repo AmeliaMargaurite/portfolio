@@ -1,0 +1,24 @@
+section.work-history {
+	.jobs-section {
+		& .title__wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			column-gap: 0.8rem;
+		}
+
+		& .skills {
+			display: flex;
+			flex-wrap: wrap;
+			column-gap: 0.8rem;
+			font-style: italic;
+			li {
+				list-style: none;
+				&.highlight {
+					background: var(--aqua300);
+					padding: 0 0.8rem;
+				}
+			}
+		}
+	}
+}

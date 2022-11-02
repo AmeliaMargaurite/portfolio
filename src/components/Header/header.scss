@@ -8,6 +8,7 @@ header {
 	// @include background;
 
 	& .header__info {
+		text-decoration: none;
 		p {
 			font-size: 1.4rem;
 		}

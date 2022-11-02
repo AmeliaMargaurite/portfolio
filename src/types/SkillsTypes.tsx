@@ -1,3 +1,3 @@
-export type Skill = string;
+export type SkillType = string;
 
-export type Skills = Array<Skill>;
+export type SkillsType = Array<SkillType>;

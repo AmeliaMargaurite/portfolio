@@ -1,4 +1,7 @@
 .home {
+	&.body {
+		overflow: hidden;
+	}
 	.project-card__wrapper {
 		display: flex;
 		flex-wrap: wrap;

@@ -1,0 +1,16 @@
+.side-projects {
+	.project {
+		&__name {
+			font-weight: 600;
+		}
+
+		&__link {
+			display: flex;
+			column-gap: 0.8rem;
+		}
+	}
+
+	&__link {
+		font-size: 1.4rem;
+	}
+}

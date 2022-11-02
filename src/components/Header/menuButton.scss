@@ -1,7 +1,7 @@
 @import "../../scss/variables";
 
 .menu__button {
-	position: fixed;
+	position: absolute;
 	height: max-content;
 	right: 3.2rem;
 	top: 3.2rem;
@@ -24,7 +24,7 @@
 	&.open {
 		span {
 			transition: transform 0.25s ease, background-color 0.5s ease;
-			background: var(--mix-colors-yellow);
+			// background: var(--mix-colors-yellow);
 		}
 
 		span:nth-child(1) {

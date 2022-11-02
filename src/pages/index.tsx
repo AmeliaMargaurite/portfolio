@@ -1,13 +1,20 @@
-import React, { useEffect } from "react";
-import type { HeadFC } from "gatsby";
+import React, { useEffect, useContext } from "react";
+import { HeadFC, Link } from "gatsby";
 import { Layout } from "../components/Layout";
 import { ProjectCard } from "../components/ProjectCard";
 import { LinkType, LinksType } from "../types/LinksTypes";
+// import icon180 from "../images/apple-touch-icon.png";
+// import icon32 from "../images/favicon-32x32.png";
+// import icon16 from "../images/favicon-16x16.png";
+// import iconManifest from "../images/site.webmanifest";
+import { Text } from "../components/Typography";
+import "./index.scss";
+import { SkillsContext } from "../contexts/SkillsContext";
 
 const links: LinksType = [
 	{
 		text: "Task Manager with Calendar",
-		url: "/task-manager",
+		url: "/projects/task-manager",
 		description:
 			"Decluttered but powerful task manager to actually get work done.",
 		color: "--mix-colors-cyan",
@@ -24,7 +31,7 @@ const links: LinksType = [
 	},
 	{
 		text: "IND Appointment Checker",
-		url: "/ind-appointment-checker",
+		url: "/projects/ind-appointment-checker",
 		description:
 			"An easy to use tool to see an overview of available appointments at IND desks",
 		color: "--mix-colors-aqua",
@@ -40,7 +47,7 @@ const links: LinksType = [
 	},
 	{
 		text: "Retail store with Laravel backend",
-		url: "/walkers-creek",
+		url: "/projects/walkers-creek",
 		description:
 			"Custom built retail store for Australian camping goods, with Laravel backend added at the end of the project",
 		color: "--mix-colors-green",
@@ -60,32 +67,61 @@ const links: LinksType = [
 ];
 
 const IndexPage = () => {
-	useEffect(() => {
-		const savedTheme = localStorage.getItem("theme");
-		const prefersDark =
-			window.matchMedia &&
-			window.matchMedia("(prefers-color-scheme: dark)").matches;
-		console.log({ prefersDark });
-		if (savedTheme && (savedTheme === "light" || savedTheme === "dark")) {
-			// set_themeMode(savedTheme);
-			document.body.className = savedTheme + "Mode";
-		} else if (prefersDark) {
-			// set_themeMode("dark");
-			document.body.className = "darkMode";
-		}
-	});
+	const { skills, setSkills } = useContext(SkillsContext);
+	useEffect(() => {}, [skills, setSkills]);
+	// setSkills(["boop"]);
+	// const skills = [""];
+	console.log({ skills });
+
 	return (
 		<Layout className="home">
-			{/* <Introduction /> */}
-			<ul className="project-card__wrapper">
-				{links.map((link: LinkType) => {
-					return <ProjectCard link={link} key={link.url} />;
-				})}
-			</ul>
+			<section>
+				<Text type="h1">About me</Text>
+				<span className="wrapper">
+					<ul className="withPadding">
+						<li>Continual learning, continual improvement</li>
+						<li>Passion for clean and accessible UI/UX </li>
+						<li>Coffee is everything</li>
+					</ul>
+				</span>
+			</section>
+			<section>
+				<Text type="h3">My work in action</Text>{" "}
+				<ul className="project-card__wrapper">
+					{links.map((link: LinkType) => {
+						return <ProjectCard link={link} key={link.url} skills={skills} />;
+					})}
+				</ul>
+				<Link to="/projects">
+					View more of my projects <span className="icon thin-arrow right" />
+				</Link>
+			</section>
 		</Layout>
 	);
 };
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head: HeadFC = () => (
+	<>
+		<title>Home Page</title>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href={`/apple-touch-icon.png`}
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href={`/favicon-32x32.png`}
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href={`/favicon-16x16.png`}
+		/>
+		<link rel="manifest" href={`site.webmanifest`} />
+	</>
+);

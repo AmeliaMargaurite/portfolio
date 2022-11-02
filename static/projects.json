@@ -1,0 +1,71 @@
+{
+  "projects": {
+    "task-manager": {
+      "title": "Task and Project Manager with Calendar",
+      "slug": "task-manager",
+      "img_src": "task-manager-screenshot.png",
+      "img_alt": "alt for screenshot",
+      "liveURL": "https://www.task-manager.everlearning.com.au/login?username=guest&?password=guest",
+      "gitHubURL": "https://github.com/AmeliaMargaurite/everlearning-task-manager",
+      "description": "Created decluttered task and project manager, with calendar view",
+      "bulletPoints": [
+        "Created decluttered task and project manager",
+        "Calendar view shows tasks allocated to that day.",
+        "Uses: MySQL database, PHP for built and database requests",
+        "Uses: Javascript Web Components, Drag and Drop API, Fetch API, Touch Events"
+      ],
+      "languages": [
+        "PHP",
+        "MySql",
+        "Javascript",
+        "WebComponents"
+      ],
+      "problem": "Current available task managers never quite fit my needs",
+      "goal": "Create decluttered task manager with kanban boards and calendar. Focus on clean, minimal design. I want to not be distracted by how it looks or it displaying or asking for more than I truly need",
+      "process": "Originally built in Preact storing tasks in localStorage, however I later rebuilt the project in PHP with MySQL database for more persistance. <br/><br/>I started by making a basic design in Figma, including light/dark mode. Tested basics of Drag and Drop API, saving data to localStorage, and context updating. Once I decided I wanted more persistance and to be able to use the same information on mobile and desktop, I rebuilt with PHP and a MySQL database. ",
+      "results": "",
+      "reflection": "Overall the project solves the problem it set out to. There are still parts which are works in progress, and more additions I would like to add. If (when) I rework it I would likely created a Laravel project instead as I've now had some experience with this and appreciate what it has to offer."
+    },
+    "ind-appointment-checker": {
+      "title": "IND Appointment Checker",
+      "slug": "ind-appointment-checker",
+      "img_src": "",
+      "img_alt": "",
+      "liveURL": "https://ameliamargaurite.github.io/ind_biometrics_appt_checker",
+      "gitHubURL": "https://github.com/AmeliaMargaurite/ind_biometrics_appt_checker",
+      "bulletPoints": [
+        "View earliest available appointment at chosen locations",
+        "Multiple locations can be viewed at once to allow user to make an informed decision of where to book their appointment",
+        "Compared to IND website reduces number of clicks to view all necessary data"
+      ],
+      "description": "Easy to use website to see soonest available appointment at all IND desks. Easily seen an overview of available appointments and compare between desks to help inform users where to book (when the choice is available",
+      "languages": [],
+      "problem": " ",
+      "goal": " ",
+      "process": " ",
+      "results": "",
+      "reflection": " "
+    },
+    "walkers-creek": {
+      "title": "PHP Retail Web Store with Laravel Backend",
+      "slug": "walkers-creek",
+      "img_src": "",
+      "img_alt": "",
+      "liveURL": "https://www.walkerscreek.com.au",
+      "gitHubURL": "https://github.com/AmeliaMargaurite/walkers-creek",
+      "bulletPoints": [
+        "Uses mix of PHP and Javascript Web Components with Stripe payment system",
+        "Frontend site calls MySQL database for products and home page layout",
+        "Database response is saved to session to reduce unnecessary calls",
+        "On page change checks if any database changes have happened, recalls and resaves products and layout data if true"
+      ],
+      "description": "",
+      "languages": [],
+      "problem": " ",
+      "goal": " ",
+      "process": " ",
+      "results": "",
+      "reflection": " "
+    }
+  }
+}

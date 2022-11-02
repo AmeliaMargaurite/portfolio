@@ -16,14 +16,11 @@
 	--blue200: #d8ecef;
 	--blue100: #f2f9fa;
 
-	--aqua800: #24ac82;
-	--aqua700: #48b693;
-	--aqua600: #64c1a3;
-	--aqua500: #7ecbb3;
-	--aqua400: #97d5c3;
-	--aqua300: #b0dfd2;
-	--aqua200: #c8e8e0;
-	--aqua100: #e1f2ee;
+	--aqua500: #001300;
+	--aqua400: #22593b;
+	--aqua300: #24ac82;
+	--aqua200: #7cd6ba;
+	--aqua100: #c6fff0;
 
 	--grey800: #2e2e2e;
 	--grey700: #484848;
@@ -36,22 +33,25 @@
 
 	--light: var(--grey100);
 	--dark: var(--grey800);
-	--primary: var(--dark);
-	--secondary: var(--light);
-	--link: var(--aqua800);
+	--primary: var(--light);
+	--secondary: var(--dark);
+	--link: var(--primary);
 
 	--menu-zIndex: 5;
 	--menu-btn-zIndex: 10;
+	--body-background-image: var(--background-image-dark);
 
-	@media (prefers-color-scheme: dark) {
-		--primary: var(--light);
-		--secondary: var(--dark);
-	}
+	// @media (prefers-color-scheme: dark) {
+	// 	--primary: var(--light);
+	// 	--secondary: var(--dark);
+	// 	--body-background-image: var(--background-image-dark);
+	// }
 
-	@media (prefers-color-scheme: light) {
-		--primary: var(--dark);
-		--secondary: var(--light);
-	}
+	// @media (prefers-color-scheme: light) {
+	// 	--primary: var(--dark);
+	// 	--secondary: var(--light);
+	// 	--body-background-image: var(--background-image-light);
+	// }
 }
 
 // BREAKPOINTS

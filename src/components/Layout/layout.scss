@@ -1,8 +1,11 @@
+@import "../../scss/backgrounds";
 @import "../../scss/variables";
 @import "../../scss/mixins";
+
 .body {
 	color: var(--primary);
 	background-color: var(--dark);
+	// overflow: hidden;
 	@include background-design;
 
 	& .layout__wrapper {
