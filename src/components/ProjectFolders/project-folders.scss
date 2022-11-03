@@ -1,7 +1,9 @@
 .project-folders__wrapper {
-	display: flex;
-	row-gap: 1.6rem;
-	column-gap: 1.6rem;
-	flex-wrap: wrap;
+	--gap: 2rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	row-gap: var(--gap);
+	column-gap: var(--gap);
 	align-items: flex-end;
+	justify-content: space-between;
 }

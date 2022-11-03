@@ -66,6 +66,80 @@
       "process": " ",
       "results": "",
       "reflection": " "
+    },
+    "rummikub-og": {
+      "title": "Rummikub - Original Build",
+      "slug": "rummikub-og",
+      "img_src": "",
+      "img_alt": "",
+      "liveURL": "https://ameliamargaurite.github.io/ind_biometrics_appt_checker",
+      "gitHubURL": "https://github.com/AmeliaMargaurite/ind_biometrics_appt_checker",
+      "bulletPoints": [
+        "Built to play with partner online during COVID separation"
+      ],
+      "description": "",
+      "languages": [],
+      "problem": " ",
+      "goal": " ",
+      "process": " ",
+      "results": "",
+      "reflection": " "
+    },
+    "four-in-a-row-og": {
+      "title": "Four In A Row - Original Build",
+      "slug": "four-in-a-row-og",
+      "img_src": "",
+      "img_alt": "",
+      "liveURL": "https://ameliamargaurite.github.io/ind_biometrics_appt_checker",
+      "gitHubURL": "https://github.com/AmeliaMargaurite/ind_biometrics_appt_checker",
+      "bulletPoints": [
+        "Built to play with partner online during COVID separation"
+      ],
+      "description": "",
+      "languages": [],
+      "problem": " ",
+      "goal": " ",
+      "process": " ",
+      "results": "",
+      "reflection": " "
+    },
+    "task-manager-og": {
+      "title": "Task Manager - Original Build",
+      "slug": "task-manager-og",
+      "img_src": "",
+      "img_alt": "",
+      "liveURL": "https://ameliamargaurite.github.io/ind_biometrics_appt_checker",
+      "gitHubURL": "https://github.com/AmeliaMargaurite/ind_biometrics_appt_checker",
+      "bulletPoints": [
+        "First built of Task Manager using Preact and localStorage"
+      ],
+      "description": "",
+      "languages": [],
+      "problem": " ",
+      "goal": " ",
+      "process": " ",
+      "results": "",
+      "reflection": " "
+    },
+    "discord-bot": {
+      "title": "Discord Bot",
+      "slug": "discord-bot",
+      "img_src": "",
+      "img_alt": "",
+      "liveURL": "https://ameliamargaurite.github.io/ind_biometrics_appt_checker",
+      "gitHubURL": "https://github.com/AmeliaMargaurite/ind_biometrics_appt_checker",
+      "bulletPoints": [
+        "Interactive bot for casual server",
+        "Has basic commands for random 'gifts', puns etc",
+        "Has admin abilities to change saved gifts, puns etc"
+      ],
+      "description": "",
+      "languages": [],
+      "problem": " ",
+      "goal": " ",
+      "process": " ",
+      "results": "",
+      "reflection": " "
     }
   }
 }

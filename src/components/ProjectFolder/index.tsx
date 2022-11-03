@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "gatsby";
+import React, { RefObject, useRef, useState } from "react";
+import { GatsbyLinkProps, Link } from "gatsby";
 import { ProjectProps, ProjectType } from "../../types/ProjectsTypes";
 import "./project-folder.scss";
 
@@ -12,8 +12,27 @@ export const ProjectFolder = ({
 	bulletPoints,
 	languages,
 }: ProjectProps) => {
+	const [folderOpen, setFolderOpen] = useState<boolean>(false);
+
+	const linkRef = useRef<any>(null);
+
+	const handleClick = () => {
+		if (!folderOpen) {
+			setFolderOpen(!folderOpen);
+			setTimeout(() => {
+				if (linkRef && linkRef.current) {
+					linkRef.current.click();
+				}
+			}, 500);
+		}
+	};
 	return (
-		<Link to={"/projects/" + slug} className="project-folder__wrapper">
+		<div
+			className={`project-folder__wrapper ${folderOpen ? "open" : ""}`}
+			onClick={handleClick}
+		>
+			<Link ref={linkRef} to={"/projects/" + slug} className="hidden-link" />
+
 			<span className="project-folder back">
 				{languages && languages.length > 0 && (
 					<span className="languages">
@@ -26,6 +45,8 @@ export const ProjectFolder = ({
 				)}
 			</span>
 			<span className="project-folder front">{title}</span>
-		</Link>
+
+			{/* </Link> */}
+		</div>
 	);
 };
