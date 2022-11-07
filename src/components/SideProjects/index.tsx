@@ -18,11 +18,11 @@ export function SideProjects() {
 					View all
 				</Link>
 			</Text>
-			<span className="content-wrapper">
+			<span className="content__wrapper">
 				{projectsKeys ? (
 					projectsKeys.map((id, key) => {
 						const project: ProjectProps | null = projects?.[id] ?? null;
-						return project ? (
+						return project && key < 3 ? (
 							<Project key={key} {...project} />
 						) : (
 							<React.Fragment key={key} />
@@ -50,19 +50,21 @@ const Project = ({
 			<Text type="h6" className="project__name">
 				{title}
 			</Text>
-			<p className="project__link">
-				Live:{" "}
-				<a href={liveURL} target="_blank">
-					{liveURL}
-				</a>
-			</p>
+			<span className="links__wrapper">
+				<p className="project__link">
+					<a href={liveURL} target="_blank">
+						<span className="icon live " />
+						Live site
+					</a>
+				</p>
 
-			<p className="project__link">
-				GitHub:{" "}
-				<a href={gitHubURL} target="_blank">
-					{gitHubURL}
-				</a>
-			</p>
+				<p className="project__link">
+					<a href={gitHubURL} target="_blank">
+						<span className="icon github " />
+						GitHub Repo
+					</a>
+				</p>
+			</span>
 			<ul className="withPadding">
 				{bulletPoints &&
 					bulletPoints.map((point, key) => <li key={key}>{point}</li>)}

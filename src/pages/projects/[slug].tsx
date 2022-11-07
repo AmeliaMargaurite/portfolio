@@ -13,25 +13,22 @@ export default function ProjectTemplate({ params }: any) {
 	console.log({ project });
 	if (project) {
 		return (
-			<Layout className="project__page">
+			<Layout className="project__page paper">
 				<span className="title__wrapper">
 					<Picture name="t" alt="t" className="hero" />
 					<Text type="h1">{project?.title}</Text>
 				</span>
 
 				<span className="links__wrapper">
-					<p>
-						Live:{" "}
-						<a href={project?.liveURL} target="_blank">
-							{project?.liveURL}
-						</a>
-					</p>
-					<p>
-						GitHub:{" "}
-						<a href={project?.gitHubURL} target="_blank">
-							{project?.gitHubURL}
-						</a>
-					</p>
+					<a href={project?.liveURL} target="_blank">
+						<span className="icon live large" />
+						Link to live website
+					</a>
+
+					<a href={project?.gitHubURL} target="_blank">
+						<span className="icon github large" />
+						Link to GitHub Repo
+					</a>
 				</span>
 
 				{project?.languages ? (

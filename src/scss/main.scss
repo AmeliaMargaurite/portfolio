@@ -29,23 +29,23 @@ h6 {
 }
 
 h1 {
-	font-size: 2.25em;
+	font-size: 1.8em;
 }
 
 h2 {
-	font-size: 2em;
+	font-size: 1.55em;
 }
 
 h3 {
-	font-size: 1.75em;
+	font-size: 1.3em;
 }
 
 h4 {
-	font-size: 1.5em;
+	font-size: 1.05em;
 }
 
 h5 {
-	font-size: 1.25em;
+	font-size: 1em;
 }
 
 h6 {
@@ -68,4 +68,39 @@ a {
 
 ul.withPadding {
 	padding-left: 2.4rem;
+}
+
+.divider {
+	display: block;
+	height: 0.4rem;
+	width: 100%;
+	background: var(--aqua400);
+	opacity: 0.5;
+	border-radius: 4rem;
+}
+
+@media (min-width: $small) {
+	h1 {
+		font-size: 2.25em;
+	}
+
+	h2 {
+		font-size: 2em;
+	}
+
+	h3 {
+		font-size: 1.75em;
+	}
+
+	h4 {
+		font-size: 1.5em;
+	}
+
+	h5 {
+		font-size: 1.25em;
+	}
+
+	h6 {
+		font-size: 1em;
+	}
 }

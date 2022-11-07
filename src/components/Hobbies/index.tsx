@@ -7,7 +7,7 @@ export function Hobbies() {
 	return (
 		<ResumeSection className="hobbies">
 			<Text type="h3">Hobbies</Text>
-			<span className="content-wrapper">
+			<span className="content__wrapper">
 				<ul className="withPadding">
 					<li>Making things -- eg knitting, crochet, programming</li>
 					<li>Reading -- science fiction, horror</li>

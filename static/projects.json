@@ -18,7 +18,7 @@
         "PHP",
         "MySql",
         "Javascript",
-        "WebComponents"
+        "Web Components"
       ],
       "problem": "Current available task managers never quite fit my needs",
       "goal": "Create decluttered task manager with kanban boards and calendar. Focus on clean, minimal design. I want to not be distracted by how it looks or it displaying or asking for more than I truly need",
@@ -39,7 +39,7 @@
         "Compared to IND website reduces number of clicks to view all necessary data"
       ],
       "description": "Easy to use website to see soonest available appointment at all IND desks. Easily seen an overview of available appointments and compare between desks to help inform users where to book (when the choice is available",
-      "languages": [],
+      "languages": ["Javascript", "ExpressJS", "NodeJS", "Web Components", "SCSS"],
       "problem": " ",
       "goal": " ",
       "process": " ",
@@ -60,7 +60,14 @@
         "On page change checks if any database changes have happened, recalls and resaves products and layout data if true"
       ],
       "description": "",
-      "languages": [],
+      "languages": [
+        "PHP",
+        "Javascript",
+        "Laravel",
+        "MySql",
+        "Web Components",
+        "SCSS"
+      ],
       "problem": " ",
       "goal": " ",
       "process": " ",
@@ -78,7 +85,11 @@
         "Built to play with partner online during COVID separation"
       ],
       "description": "",
-      "languages": [],
+      "languages": [
+        "Javascript",
+        "Web Components",
+        "SCSS"
+      ],
       "problem": " ",
       "goal": " ",
       "process": " ",
@@ -96,7 +107,10 @@
         "Built to play with partner online during COVID separation"
       ],
       "description": "",
-      "languages": [],
+      "languages": [
+        "Javascript",
+        "SCSS"
+      ],
       "problem": " ",
       "goal": " ",
       "process": " ",
@@ -114,7 +128,11 @@
         "First built of Task Manager using Preact and localStorage"
       ],
       "description": "",
-      "languages": [],
+      "languages": [
+        "Preact",
+        "Javascript",
+        "SCSS"
+      ],
       "problem": " ",
       "goal": " ",
       "process": " ",
@@ -134,7 +152,11 @@
         "Has admin abilities to change saved gifts, puns etc"
       ],
       "description": "",
-      "languages": [],
+      "languages": [
+        "NodeJS",
+        "Javascript",
+        "Bash"
+      ],
       "problem": " ",
       "goal": " ",
       "process": " ",

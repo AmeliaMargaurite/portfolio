@@ -5,6 +5,7 @@ section.work-history {
 			flex-wrap: wrap;
 			align-items: center;
 			column-gap: 0.8rem;
+			line-height: 1;
 		}
 
 		& .skills {
@@ -12,13 +13,19 @@ section.work-history {
 			flex-wrap: wrap;
 			column-gap: 0.8rem;
 			font-style: italic;
+
 			li {
 				list-style: none;
+
 				&.highlight {
 					background: var(--aqua300);
 					padding: 0 0.8rem;
 				}
 			}
+		}
+
+		& .responsibilities {
+			margin-top: 0.8rem;
 		}
 	}
 }

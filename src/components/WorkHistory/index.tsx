@@ -62,7 +62,7 @@ export function WorkHistory() {
 	return (
 		<ResumeSection className="work-history">
 			<Text type="h3">Work History</Text>
-			<span className="content-wrapper">
+			<span className="content__wrapper">
 				{jobs.map((job, key) => (
 					<JobSection key={key} job={job} skillsToHighlight={skills} />
 				))}

@@ -27,4 +27,26 @@
 	main {
 		padding: 3.2rem;
 	}
+
+	main {
+		display: grid;
+		row-gap: 3.2rem;
+	}
+
+	main.paper {
+		--page-margin: 3.2rem;
+
+		background: var(--paper-background);
+		color: var(--dark);
+		margin: var(--page-margin);
+		border-radius: 0.4rem;
+
+		a {
+			color: var(--aqua400);
+
+			& .icon {
+				background-color: var(--aqua400);
+			}
+		}
+	}
 }

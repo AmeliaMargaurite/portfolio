@@ -1,11 +1,9 @@
 @import "../../scss/variables";
 
 .project-folder {
-	// --folder-color: var(--grey700);
-	--folder-color: #bbb6b0c4;
+	--folder-color: var(--paper-background);
 	--tab-height: 2rem;
 	--border-width: 1px;
-
 	--border-color: rgba(255, 255, 255, 0.267);
 
 	position: relative;
@@ -17,7 +15,7 @@
 	border-bottom-left-radius: 1.6rem;
 	border-bottom-right-radius: 1.6rem;
 	border-top-left-radius: 0.4rem;
-	color: var(--light);
+	color: var(--dark);
 	font-size: 2.4rem;
 	border: var(--border-width) solid var(--border-color);
 	text-align: center;
@@ -35,7 +33,7 @@
 		width: 49.8%;
 		height: var(--tab-height);
 		top: calc(var(--tab-height) * -1);
-		background: var(--folder-color);
+		background: var(--paper);
 		border-top-right-radius: 1rem;
 		border-top-left-radius: 1rem;
 		border: 1px solid var(--border-color);
@@ -43,16 +41,13 @@
 	}
 
 	&.back {
-		background: var(--grey800);
+		background: var(--paper-background);
 
 		&::after {
 			display: none;
 		}
 		&::before {
-			background-image: linear-gradient(
-				var(--folder-color) 70%,
-				var(--grey800)
-			);
+			background-image: linear-gradient(var(--paper) 70%, var(--grey800));
 			left: calc(var(--border-width) * -1);
 		}
 	}

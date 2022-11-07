@@ -1,20 +1,14 @@
 @import "../../scss/variables";
 
 main.project__page {
-	--page-color: #d7d3cb;
 	--clip-width: 1.6rem;
-	--page-margin: 3.2rem;
 	--clip-start: calc(var(--page-margin) + 1.6rem);
 
 	position: relative;
 	display: grid;
-	grid-template-columns: auto min-content;
-	column-gap: 3.2rem;
 	row-gap: 3.2rem;
-	margin: var(--page-margin);
-	background: var(--page-color);
-	color: var(--dark);
 
+	// paperclip
 	&::before {
 		position: absolute;
 		content: "";
@@ -25,19 +19,19 @@ main.project__page {
 		top: -1rem;
 		left: var(--clip-start);
 		transform: rotate(-2deg);
-		z-index: 100;
+		z-index: var(--below-menu-zIndex);
 	}
 
+	// hide small section of paperclip (gap)
 	&::after {
 		position: absolute;
 		content: "";
-		background: var(--page-color);
-		/* background: pink; */
+		background: var(--paper);
 		width: 1rem;
 		height: 1rem;
 		top: 0;
 		left: calc(var(--clip-start) + var(--clip-width));
-		z-index: 200;
+		z-index: calc(var(--below-menu-zIndex) + 1);
 	}
 
 	& picture {
@@ -48,24 +42,28 @@ main.project__page {
 	}
 
 	& .title__wrapper {
+		display: grid;
+		row-gap: 1.6rem;
 		grid-column: 1/-1;
 	}
 	& .hero {
 		max-width: 100%;
 	}
 
+	& .links__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: 2.4rem;
+		column-gap: 2.4rem;
+	}
+
 	& .languages {
 		display: grid;
 		row-gap: 1.6rem;
-		grid-column: 2;
 		padding: 2.4rem;
 		border: 1px dashed;
-		max-width: max-content;
+		width: 100%;
 		height: max-content;
-	}
-
-	& .links__wrapper {
-		// grid-column: 2;
 	}
 
 	& .content__wrapper {
@@ -75,8 +73,15 @@ main.project__page {
 		grid-column: 1/-1;
 	}
 
-	@media (min-width: $medium) {
-		grid-template-columns: 3fr 1fr;
+	@media (min-width: $xsmall) {
+		& .languages ul {
+			column-count: 2;
+		}
+	}
+
+	@media (min-width: $small) {
+		grid-template-columns: 2fr 1fr;
+		column-gap: 5.6rem;
 
 		& .title__wrapper {
 			grid-column: unset;
@@ -91,6 +96,12 @@ main.project__page {
 			top: 3.2rem;
 			grid-column: 2;
 			grid-row: 1;
+			width: 100%;
+			max-width: unset;
+
+			& ul {
+				column-count: 1;
+			}
 		}
 
 		& .content__wrapper {

@@ -1,5 +1,7 @@
 .side-projects {
 	.project {
+		display: grid;
+		row-gap: 0.8rem;
 		&__name {
 			font-weight: 600;
 		}
@@ -10,7 +12,18 @@
 		}
 	}
 
+	& .links__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: 2.4rem;
+		column-gap: 2.4rem;
+	}
 	&__link {
 		font-size: 1.4rem;
+	}
+
+	& .content__wrapper {
+		display: grid;
+		row-gap: 2.4rem;
 	}
 }

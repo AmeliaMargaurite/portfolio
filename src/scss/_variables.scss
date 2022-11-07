@@ -37,9 +37,12 @@
 	--secondary: var(--dark);
 	--link: var(--primary);
 
+	--below-menu-zIndex: 3;
 	--menu-zIndex: 5;
 	--menu-btn-zIndex: 10;
 	--body-background-image: var(--background-image-dark);
+	--paper: #fbfaf7;
+	--paper-background: linear-gradient(var(--paper), #ffffffc7);
 
 	// @media (prefers-color-scheme: dark) {
 	// 	--primary: var(--light);

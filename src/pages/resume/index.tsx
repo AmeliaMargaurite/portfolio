@@ -8,9 +8,11 @@ import "./resume.scss";
 
 export default function Resume() {
 	return (
-		<Layout className="resume">
+		<Layout className="resume paper">
 			<WorkHistory />
+			<span className="divider" />
 			<SideProjects />
+			<span className="divider" />
 			<Hobbies />
 		</Layout>
 	);
