@@ -71,8 +71,8 @@ import { ProjectProps, ProjectType } from "../types/ProjectsTypes";
 const IndexPage = () => {
 	const projects = useProjects();
 	const projectsKeys = projects ? Object.keys(projects) : null;
-	const { skills, setSkills } = useContext(SkillsContext);
-	useEffect(() => {}, [skills, setSkills]);
+	const skills = useContext(SkillsContext);
+	// useEffect(() => {}, [skills, setSkills]);
 	// setSkills(["boop"]);
 	// const skills = [""];
 	console.log({ skills });

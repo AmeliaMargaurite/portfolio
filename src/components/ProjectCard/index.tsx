@@ -11,13 +11,12 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
-	const { skills, setSkills }: { skills: SkillsType | null; setSkills: any } =
-		useContext(SkillsContext);
-	useEffect(() => {}, [skills, setSkills]);
+	const skills = useContext(SkillsContext);
+
 	console.log({ skills });
 	return (
-		<li className="project-card">
-			<Link to={project.slug}>
+		<span className={`project-card ${project?.old ? "old-code" : ""}`}>
+			<Link to={"/projects/" + project.slug}>
 				<span className="icon-circle__wrapper">
 					<span className={`icon large ${project.icon}`}> </span>
 				</span>
@@ -31,7 +30,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 					})}
 				</span>
 			</Link>
-		</li>
+		</span>
 	);
 };
 

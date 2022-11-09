@@ -1,13 +1,29 @@
 @import "../../scss/variables";
 // is a li
 .project-card {
+	position: relative;
 	list-style: none;
 	padding: 2.4rem;
 	color: var(--secondary);
 	border-radius: 0.8rem;
 	width: 100%;
 	background-image: linear-gradient(45deg, #eeeeeeab, #ffffff);
+	overflow: hidden;
 
+	&.old-code::after {
+		position: absolute;
+		content: "warning: \A old code";
+		white-space: pre-wrap;
+		line-height: 1;
+		bottom: 1.6rem;
+		right: -4.4rem;
+		background: var(--aqua300);
+		width: max-content;
+		height: max-content;
+		transform: rotate(-45deg);
+		padding: 0.4rem 4.8rem;
+		text-align: center;
+	}
 	& a {
 		display: grid;
 		justify-items: center;
@@ -20,6 +36,11 @@
 
 	& h3 {
 		font-weight: 400;
+	}
+
+	& .description {
+		align-self: flex-start;
+		line-height: 1.75;
 	}
 
 	& .icon-circle__wrapper {

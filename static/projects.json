@@ -7,7 +7,7 @@
       "img_alt": "alt for screenshot",
       "liveURL": "https://task-manager.everlearning.com.au/login/?username=guest&password=GuestPassword1!",
       "gitHubURL": "https://github.com/AmeliaMargaurite/everlearning-task-manager",
-      "description": "Created decluttered task and project manager, with calendar view",
+      "description": "Decluttered task manager with calendar view to plan projects. Allows for multiple users, multiple projects, categorising, CRUD operations. cPanel hosting with MySql database.",
       "bulletPoints": [
         "Created decluttered task and project manager",
         "Calendar view shows tasks allocated to that day.",
@@ -18,7 +18,8 @@
         "PHP",
         "MySql",
         "Javascript",
-        "Web Components"
+        "Web Components",
+        "cPanel"
       ],
       "problem": "Current available task managers never quite fit my needs",
       "goal": "Create decluttered task manager with kanban boards and calendar. Focus on clean, minimal design. I want to not be distracted by how it looks or it displaying or asking for more than I truly need",
@@ -39,7 +40,7 @@
         "Multiple locations can be viewed at once to allow user to make an informed decision of where to book their appointment",
         "Compared to IND website reduces number of clicks to view all necessary data"
       ],
-      "description": "Easy to use website to see soonest available appointment at all IND desks. Easily seen an overview of available appointments and compare between desks to help inform users where to book (when the choice is available",
+      "description": "Using IND data calls, shows the soonest available appointment from one or multiple locations, as well as all other appointments, in one easy view. Hosted with GitPages and Heroku.",
       "languages": [
         "Javascript",
         "ExpressJS",
@@ -59,7 +60,7 @@
       "slug": "walkers-creek",
       "img_src": "",
       "img_alt": "",
-      "liveURL": "https://www.walkerscreek.com.au",
+      "liveURL": "https://www.staging.walkerscreek.com.au",
       "gitHubURL": "https://github.com/AmeliaMargaurite/walkers-creek",
       "bulletPoints": [
         "Uses mix of PHP and Javascript Web Components with Stripe payment system",
@@ -67,14 +68,15 @@
         "Database response is saved to session to reduce unnecessary calls",
         "On page change checks if any database changes have happened, recalls and resaves products and layout data if true"
       ],
-      "description": "",
+      "description": "Retail store front for purchases, uses Stripe API and MySql database with Laravel backend. Following best practices, this is a fast, responsive site. Detects changes to database and updates on next page load.",
       "languages": [
         "PHP",
         "Javascript",
         "Laravel",
         "MySql",
         "Web Components",
-        "SCSS"
+        "SCSS",
+        "cPanel"
       ],
       "problem": " ",
       "goal": " ",
@@ -82,74 +84,6 @@
       "results": "",
       "reflection": " ",
       "icon": "shop"
-    },
-    "rummikub-og": {
-      "title": "Rummikub - Original Build",
-      "slug": "rummikub-og",
-      "img_src": "",
-      "img_alt": "",
-      "liveURL": "https://ameliamargaurite.github.io/ind_biometrics_appt_checker",
-      "gitHubURL": "https://github.com/AmeliaMargaurite/ind_biometrics_appt_checker",
-      "bulletPoints": [
-        "Built to play with partner online during COVID separation"
-      ],
-      "description": "",
-      "languages": [
-        "Javascript",
-        "Web Components",
-        "SCSS"
-      ],
-      "problem": " ",
-      "goal": " ",
-      "process": " ",
-      "results": "",
-      "reflection": " ",
-      "icon": "shop"
-    },
-    "four-in-a-row-og": {
-      "title": "Four In A Row - Original Build",
-      "slug": "four-in-a-row-og",
-      "img_src": "",
-      "img_alt": "",
-      "liveURL": "https://ameliamargaurite.github.io/ind_biometrics_appt_checker",
-      "gitHubURL": "https://github.com/AmeliaMargaurite/ind_biometrics_appt_checker",
-      "bulletPoints": [
-        "Built to play with partner online during COVID separation"
-      ],
-      "description": "",
-      "languages": [
-        "Javascript",
-        "SCSS"
-      ],
-      "problem": " ",
-      "goal": " ",
-      "process": " ",
-      "results": "",
-      "reflection": " ",
-      "icon": "appointment"
-    },
-    "task-manager-og": {
-      "title": "Task Manager - Original Build",
-      "slug": "task-manager-og",
-      "img_src": "",
-      "img_alt": "",
-      "liveURL": "https://ameliamargaurite.github.io/ind_biometrics_appt_checker",
-      "gitHubURL": "https://github.com/AmeliaMargaurite/ind_biometrics_appt_checker",
-      "bulletPoints": [
-        "First built of Task Manager using Preact and localStorage"
-      ],
-      "description": "",
-      "languages": [
-        "Preact",
-        "Javascript",
-        "SCSS"
-      ],
-      "problem": " ",
-      "goal": " ",
-      "process": " ",
-      "results": "",
-      "reflection": " ",
-      "icon": "appointment"
     },
     "discord-bot": {
       "title": "Discord Bot",
@@ -174,7 +108,80 @@
       "process": " ",
       "results": "",
       "reflection": " ",
-      "icon": "appointment"
+      "icon": "discord"
+    },
+    "rummikub-og": {
+      "title": "Rummikub - Original Build",
+      "slug": "rummikub-og",
+      "img_src": "",
+      "img_alt": "",
+      "liveURL": "https://ameliamargaurite.github.io/ind_biometrics_appt_checker",
+      "gitHubURL": "https://github.com/AmeliaMargaurite/ind_biometrics_appt_checker",
+      "bulletPoints": [
+        "Built to play with partner online during COVID separation"
+      ],
+      "description": "",
+      "languages": [
+        "Javascript",
+        "Web Components",
+        "SCSS",
+        "cPanel"
+      ],
+      "problem": " ",
+      "goal": " ",
+      "process": " ",
+      "results": "",
+      "reflection": " ",
+      "icon": "heart",
+      "old": true
+    },
+    "four-in-a-row-og": {
+      "title": "Four In A Row - Original Build",
+      "slug": "four-in-a-row-og",
+      "img_src": "",
+      "img_alt": "",
+      "liveURL": "https://ameliamargaurite.github.io/ind_biometrics_appt_checker",
+      "gitHubURL": "https://github.com/AmeliaMargaurite/ind_biometrics_appt_checker",
+      "bulletPoints": [
+        "Built to play with partner online during COVID separation"
+      ],
+      "description": "",
+      "languages": [
+        "Javascript",
+        "SCSS",
+        "cPanel"
+      ],
+      "problem": " ",
+      "goal": " ",
+      "process": " ",
+      "results": "",
+      "reflection": " ",
+      "icon": "dice",
+      "old": true
+    },
+    "task-manager-og": {
+      "title": "Task Manager - Original Build",
+      "slug": "task-manager-og",
+      "img_src": "",
+      "img_alt": "",
+      "liveURL": "https://ameliamargaurite.github.io/ind_biometrics_appt_checker",
+      "gitHubURL": "https://github.com/AmeliaMargaurite/ind_biometrics_appt_checker",
+      "bulletPoints": [
+        "First built of Task Manager using Preact and localStorage"
+      ],
+      "description": "",
+      "languages": [
+        "Preact",
+        "Javascript",
+        "SCSS"
+      ],
+      "problem": " ",
+      "goal": " ",
+      "process": " ",
+      "results": "",
+      "reflection": " ",
+      "icon": "clipboard",
+      "old": true
     }
   }
 }

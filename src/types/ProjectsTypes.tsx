@@ -14,6 +14,7 @@ export interface ProjectProps {
 	results: string;
 	reflection: string;
 	icon: string;
+	old?: true;
 }
 export interface ProjectType {
 	[index: string]: ProjectProps;

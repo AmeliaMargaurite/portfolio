@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useContext } from "react";
+import { SkillsContext } from "../../contexts/SkillsContext";
 import { JobsType, JobType } from "../../types/JobsTypes";
 import { ResumeSection } from "../ResumeSection";
 import { Text } from "../Typography";
@@ -36,6 +37,7 @@ const jobs: JobsType = [
 			"ADOBE PHOTOSHOP",
 			"ILLUSTRATOR",
 			"PREMIERE PRO",
+			"SCSS",
 		],
 		responsibilities: [
 			"Worked with customer to design and build WordPress website with WooCommerce store",
@@ -58,7 +60,7 @@ const jobs: JobsType = [
 ];
 
 export function WorkHistory() {
-	const skills = [""];
+	const skills = useContext(SkillsContext);
 	return (
 		<ResumeSection className="work-history">
 			<Text type="h3">Work History</Text>
