@@ -14,7 +14,7 @@ import { SkillsContext, SkillsWrapper } from "../../contexts/SkillsContext";
 
 interface LayoutProps {
 	children: any;
-	className: string;
+	className?: string;
 }
 
 // const initialState = { skills: null, setSkills: () => {} };
@@ -24,7 +24,7 @@ interface LayoutProps {
 // 	setSkills: (e: Array<string> | null) => void;
 // }>(initialState);
 
-export const Layout = ({ children, className }: LayoutProps) => {
+export const Layout = ({ children, className = "" }: LayoutProps) => {
 	const { skills, setSkills } = useContext(SkillsContext);
 	// console.log({ context });
 

@@ -5,6 +5,7 @@ interface PictureProps {
 	alt: string;
 	className?: string;
 	id?: string;
+	width: string;
 }
 
 export default function Picture({
@@ -12,11 +13,14 @@ export default function Picture({
 	alt,
 	className = "",
 	id = "",
+	width,
 }: PictureProps) {
 	return (
 		<picture id={id}>
 			{/* <source src={"/" + size + "/" + name + ".webp"} /> */}
 			<img
+				width="1024"
+				height="auto"
 				className={className}
 				srcSet="
           ../images/Group-1_1_ci7b7s_c_scale,w_200.png 200w,

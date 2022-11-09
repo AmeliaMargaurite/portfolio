@@ -8,7 +8,7 @@ const pages: PagesType = [
 	{ name: "home", url: "/" },
 	{ name: "projects", url: "/projects" },
 	{ name: "resume", url: "/resume" },
-	{ name: "fun", url: "/fun" },
+	// { name: "fun", url: "/fun" },
 ];
 
 export const Header = () => {
@@ -17,7 +17,7 @@ export const Header = () => {
 			<Link to="/" className="header__info">
 				<span>
 					<h1>Amelia</h1>
-					<p>Aussie with working rights in the Netherlands</p>
+					<p>Australian with working rights in the Netherlands</p>
 					<p>
 						<em>Ik ben Nederlands aan het leren</em>
 					</p>

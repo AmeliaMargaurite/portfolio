@@ -1,21 +1,53 @@
 import { HeadFC } from "gatsby";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Layout } from "../../components/Layout";
 import Picture from "../../components/Picture";
 import { Text } from "../../components/Typography";
 import { useProjects } from "../../helpers/useProjects";
+import { ProjectProps, ProjectType } from "../../types/ProjectsTypes";
 import NotFoundPage from "../404";
 import "./index.scss";
 
 export default function ProjectTemplate({ params }: any) {
+	const [loading, setLoading] = useState(true);
+	const [project, setProject] = useState<ProjectProps | null | "not_found">(
+		null
+	);
+
 	const projects = useProjects();
-	const project = projects?.[params?.slug] ?? null;
-	console.log({ project });
-	if (project) {
+
+	useEffect(() => {
+		if (projects) {
+			const project = projects?.[params?.slug] ?? null;
+			if (project) {
+				setLoading(false);
+				setProject(project);
+			} else {
+				setLoading(false);
+				setProject("not_found");
+			}
+		}
+	}, [projects]);
+
+	if (loading)
+		return (
+			<Layout>
+				<div>Loading</div>
+			</Layout>
+		);
+
+	if (project === "not_found")
+		return (
+			<Layout>
+				<div>Project not found</div>
+			</Layout>
+		);
+
+	if (project !== null && !loading) {
 		return (
 			<Layout className="project__page paper">
 				<span className="title__wrapper">
-					<Picture name="t" alt="t" className="hero" />
+					<Picture name="t" alt="t" className="hero" width="auto" />
 					<Text type="h1">{project?.title}</Text>
 				</span>
 
@@ -46,7 +78,7 @@ export default function ProjectTemplate({ params }: any) {
 
 				<span className="content__wrapper">
 					<p>
-						<strong>Problem:</strong>{" "}
+						<strong>Challenge:</strong>{" "}
 						<span dangerouslySetInnerHTML={{ __html: project?.problem }} />
 					</p>
 					<p>
@@ -64,7 +96,7 @@ export default function ProjectTemplate({ params }: any) {
 				</span>
 			</Layout>
 		);
-	} else return <NotFoundPage />;
+	}
 }
 
 export const Head: HeadFC = ({ params }) => {

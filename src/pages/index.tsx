@@ -10,63 +10,67 @@ import { LinkType, LinksType } from "../types/LinksTypes";
 import { Text } from "../components/Typography";
 import "./index.scss";
 import { SkillsContext } from "../contexts/SkillsContext";
+import { useProjects } from "../helpers/useProjects";
+import { ProjectProps, ProjectType } from "../types/ProjectsTypes";
 
-const links: LinksType = [
-	{
-		text: "Task Manager with Calendar",
-		url: "/projects/task-manager",
-		description:
-			"Decluttered but powerful task manager to actually get work done.",
-		color: "--mix-colors-cyan",
-		icon: "tasks",
-		skills: [
-			"html",
-			"javascript",
-			"web components",
-			"MySql",
-			"phpmyadmin",
-			"php",
-			"scss",
-		],
-	},
-	{
-		text: "IND Appointment Checker",
-		url: "/projects/ind-appointment-checker",
-		description:
-			"An easy to use tool to see an overview of available appointments at IND desks",
-		color: "--mix-colors-aqua",
-		icon: "appointment",
-		skills: [
-			"html",
-			"javascript",
-			"web components",
-			"expressjs",
-			"node",
-			"scss",
-		],
-	},
-	{
-		text: "Retail store with Laravel backend",
-		url: "/projects/walkers-creek",
-		description:
-			"Custom built retail store for Australian camping goods, with Laravel backend added at the end of the project",
-		color: "--mix-colors-green",
-		icon: "shop",
-		skills: [
-			"html",
-			"javascript",
-			"web components",
-			"Laravel",
-			"php",
-			"phpmyadmin",
-			"sql",
-			"cpanel",
-			"scss",
-		],
-	},
-];
+// const links: LinksType = [
+// 	{
+// 		text: "Task Manager with Calendar",
+// 		url: "/projects/task-manager",
+// 		description:
+// 			"Decluttered but powerful task manager to actually get work done.",
+// 		color: "--mix-colors-cyan",
+// 		icon: "tasks",
+// 		skills: [
+// 			"html",
+// 			"javascript",
+// 			"web components",
+// 			"MySql",
+// 			"phpmyadmin",
+// 			"php",
+// 			"scss",
+// 		],
+// 	},
+// 	{
+// 		text: "IND Appointment Checker",
+// 		url: "/projects/ind-appointment-checker",
+// 		description:
+// 			"An easy to use tool to see an overview of available appointments at IND desks",
+// 		color: "--mix-colors-aqua",
+// 		icon: "appointment",
+// 		skills: [
+// 			"html",
+// 			"javascript",
+// 			"web components",
+// 			"expressjs",
+// 			"node",
+// 			"scss",
+// 		],
+// 	},
+// 	{
+// 		text: "Retail store with Laravel backend",
+// 		url: "/projects/walkers-creek",
+// 		description:
+// 			"Custom built retail store for Australian camping goods, with Laravel backend added at the end of the project",
+// 		color: "--mix-colors-green",
+// 		icon: "shop",
+// 		skills: [
+// 			"html",
+// 			"javascript",
+// 			"web components",
+// 			"Laravel",
+// 			"php",
+// 			"phpmyadmin",
+// 			"sql",
+// 			"cpanel",
+// 			"scss",
+// 		],
+// 	},
+// ];
 
 const IndexPage = () => {
+	const projects = useProjects();
+	const projectsKeys = projects ? Object.keys(projects) : null;
 	const { skills, setSkills } = useContext(SkillsContext);
 	useEffect(() => {}, [skills, setSkills]);
 	// setSkills(["boop"]);
@@ -88,9 +92,13 @@ const IndexPage = () => {
 			<section>
 				<Text type="h3">My work in action</Text>{" "}
 				<ul className="project-card__wrapper">
-					{links.map((link: LinkType) => {
-						return <ProjectCard link={link} key={link.url} skills={skills} />;
-					})}
+					{projectsKeys &&
+						projectsKeys.map((id, key) => {
+							const project = projects?.[id];
+							if (project && key < 3) {
+								return <ProjectCard project={project} key={key} />;
+							}
+						})}
 				</ul>
 				<Link to="/projects">
 					View more of my projects <span className="icon thin-arrow right" />

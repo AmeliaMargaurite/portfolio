@@ -2,13 +2,13 @@ import * as React from "react";
 import type { HeadFC } from "gatsby";
 import { Layout } from "../../components/Layout";
 import { Text } from "../../components/Typography";
-import { ProjectFolders } from "../../components/ProjectFolders";
+import { Cards } from "../../components/Cards";
 
 const IndexPage = () => {
 	return (
 		<Layout className="projects">
 			<Text type="h1">Projects</Text>
-			<ProjectFolders />
+			<Cards />
 		</Layout>
 	);
 };

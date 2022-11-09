@@ -1,28 +1,32 @@
 import { Link } from "gatsby";
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { SkillsContext } from "../../contexts/SkillsContext";
 import { LinkType } from "../../types/LinksTypes";
-import { SkillType } from "../../types/SkillsTypes";
+import { ProjectProps, ProjectType } from "../../types/ProjectsTypes";
+import { SkillsType, SkillType } from "../../types/SkillsTypes";
 import "./project-card.scss";
 
 interface ProjectCardProps {
-	link: LinkType;
-	skills: Array<string> | null;
+	project: ProjectProps;
 }
 
-export const ProjectCard = ({ link, skills }: ProjectCardProps) => {
+export const ProjectCard = ({ project }: ProjectCardProps) => {
+	const { skills, setSkills }: { skills: SkillsType | null; setSkills: any } =
+		useContext(SkillsContext);
+	useEffect(() => {}, [skills, setSkills]);
+	console.log({ skills });
 	return (
 		<li className="project-card">
-			<Link to={link.url}>
+			<Link to={project.slug}>
 				<span className="icon-circle__wrapper">
-					<span className={`icon large ${link.icon}`}> </span>
+					<span className={`icon large ${project.icon}`}> </span>
 				</span>
-				<h3 className="title">{link.text}</h3>
-				<p className="description">{link.description}</p>
+				<h3 className="title">{project.title}</h3>
+				<p className="description">{project.description}</p>
 				<span className="skills">
-					{link.skills.map((skill, key) => {
-						const highlight = skills
-							? skills?.includes(skill.toLowerCase())
-							: false;
+					{project.languages.map((skill, key) => {
+						const highlight =
+							skills !== null ? skills.includes(skill.toLowerCase()) : false;
 						return <SkillPill key={key} skill={skill} highlight={highlight} />;
 					})}
 				</span>

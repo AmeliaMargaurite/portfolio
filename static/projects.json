@@ -5,7 +5,7 @@
       "slug": "task-manager",
       "img_src": "task-manager-screenshot.png",
       "img_alt": "alt for screenshot",
-      "liveURL": "https://www.task-manager.everlearning.com.au/login?username=guest&?password=guest",
+      "liveURL": "https://task-manager.everlearning.com.au/login/?username=guest&password=GuestPassword1!",
       "gitHubURL": "https://github.com/AmeliaMargaurite/everlearning-task-manager",
       "description": "Created decluttered task and project manager, with calendar view",
       "bulletPoints": [
@@ -24,7 +24,8 @@
       "goal": "Create decluttered task manager with kanban boards and calendar. Focus on clean, minimal design. I want to not be distracted by how it looks or it displaying or asking for more than I truly need",
       "process": "Originally built in Preact storing tasks in localStorage, however I later rebuilt the project in PHP with MySQL database for more persistance. <br/><br/>I started by making a basic design in Figma, including light/dark mode. Tested basics of Drag and Drop API, saving data to localStorage, and context updating. Once I decided I wanted more persistance and to be able to use the same information on mobile and desktop, I rebuilt with PHP and a MySQL database. ",
       "results": "",
-      "reflection": "Overall the project solves the problem it set out to. There are still parts which are works in progress, and more additions I would like to add. If (when) I rework it I would likely created a Laravel project instead as I've now had some experience with this and appreciate what it has to offer."
+      "reflection": "Overall the project solves the problem it set out to. There are still parts which are works in progress, and more additions I would like to add. If (when) I rework it I would likely created a Laravel project instead as I've now had some experience with this and appreciate what it has to offer.",
+      "icon": "tasks"
     },
     "ind-appointment-checker": {
       "title": "IND Appointment Checker",
@@ -39,12 +40,19 @@
         "Compared to IND website reduces number of clicks to view all necessary data"
       ],
       "description": "Easy to use website to see soonest available appointment at all IND desks. Easily seen an overview of available appointments and compare between desks to help inform users where to book (when the choice is available",
-      "languages": ["Javascript", "ExpressJS", "NodeJS", "Web Components", "SCSS"],
+      "languages": [
+        "Javascript",
+        "ExpressJS",
+        "NodeJS",
+        "Web Components",
+        "SCSS"
+      ],
       "problem": " ",
       "goal": " ",
       "process": " ",
       "results": "",
-      "reflection": " "
+      "reflection": " ",
+      "icon": "appointment"
     },
     "walkers-creek": {
       "title": "PHP Retail Web Store with Laravel Backend",
@@ -72,7 +80,8 @@
       "goal": " ",
       "process": " ",
       "results": "",
-      "reflection": " "
+      "reflection": " ",
+      "icon": "shop"
     },
     "rummikub-og": {
       "title": "Rummikub - Original Build",
@@ -94,7 +103,8 @@
       "goal": " ",
       "process": " ",
       "results": "",
-      "reflection": " "
+      "reflection": " ",
+      "icon": "shop"
     },
     "four-in-a-row-og": {
       "title": "Four In A Row - Original Build",
@@ -115,7 +125,8 @@
       "goal": " ",
       "process": " ",
       "results": "",
-      "reflection": " "
+      "reflection": " ",
+      "icon": "appointment"
     },
     "task-manager-og": {
       "title": "Task Manager - Original Build",
@@ -137,7 +148,8 @@
       "goal": " ",
       "process": " ",
       "results": "",
-      "reflection": " "
+      "reflection": " ",
+      "icon": "appointment"
     },
     "discord-bot": {
       "title": "Discord Bot",
@@ -161,7 +173,8 @@
       "goal": " ",
       "process": " ",
       "results": "",
-      "reflection": " "
+      "reflection": " ",
+      "icon": "appointment"
     }
   }
 }

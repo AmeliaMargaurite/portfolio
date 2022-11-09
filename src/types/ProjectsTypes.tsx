@@ -13,6 +13,7 @@ export interface ProjectProps {
 	process: string;
 	results: string;
 	reflection: string;
+	icon: string;
 }
 export interface ProjectType {
 	[index: string]: ProjectProps;
