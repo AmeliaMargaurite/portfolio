@@ -1,7 +1,7 @@
 {
   "projects": {
     "task-manager": {
-      "title": "Task and Project Manager with Calendar",
+      "title": "Task Manager with Calendar",
       "slug": "task-manager",
       "img_src": "task-manager-screenshot.png",
       "img_alt": "alt for screenshot",
@@ -11,7 +11,7 @@
       "bulletPoints": [
         "Created decluttered task and project manager",
         "Calendar view shows tasks allocated to that day.",
-        "Uses: MySQL database, PHP for built and database requests",
+        "Uses: MySQL database, PHP for site build and database requests",
         "Uses: Javascript Web Components, Drag and Drop API, Fetch API, Touch Events"
       ],
       "languages": [
@@ -21,11 +21,11 @@
         "Web Components",
         "cPanel"
       ],
-      "problem": "Current available task managers never quite fit my needs",
-      "goal": "Create decluttered task manager with kanban boards and calendar. Focus on clean, minimal design. I want to not be distracted by how it looks or it displaying or asking for more than I truly need",
-      "process": "Originally built in Preact storing tasks in localStorage, however I later rebuilt the project in PHP with MySQL database for more persistance. <br/><br/>I started by making a basic design in Figma, including light/dark mode. Tested basics of Drag and Drop API, saving data to localStorage, and context updating. Once I decided I wanted more persistance and to be able to use the same information on mobile and desktop, I rebuilt with PHP and a MySQL database. ",
-      "results": "",
-      "reflection": "Overall the project solves the problem it set out to. There are still parts which are works in progress, and more additions I would like to add. If (when) I rework it I would likely created a Laravel project instead as I've now had some experience with this and appreciate what it has to offer.",
+      "challenge": "Create a task manager which suited best my needs",
+      "goal": "<ul class='withPadding'><li>Create decluttered task manager with kanban boards and calendar</li><li>Focus on clean, minimal design.</li><li>Show only options which I personally require (due date, categories etc) </li><li>Usable across mobile and desktop with same login and data</li></ul>",
+      "process": "This is a rebuild of an earlier project I'd made using Preact and saving all data to localStorage. After creating this first proof of concept, I wanted to rebuild it with a database behind it for persistance between devices.<br/><br/>I decided to work with PHP and MySQL. I have used PHP a good amount over the years and feel comfortable with it, however this was my first real use of building a MySQL database from scratch. I have learned a lot through this process, and am still learning, about how best to make calls to the database, cacheing that data and so forth.<br/><br/>I am still in the process of adding a rich text editor to make the task descriptions more helpful. Most especially styles like lists. For now I have added a small 'code' button to allow writing out HTML elements manually, until I have finished building the editor.",
+      "results": "The task manager works and I often use it to plan out next steps of various projects. The calendar still needs some work, however. It does function, and one can edit task details from the calendar. However it's not as user-friendly as I would like. On mobile it goes to the first week of the month, even if the current date is later than this. I am always on the lookout for these types of functionalities to improve.",
+      "reflection": "Overall the project solves the challenge it set out to. There are still parts which are works in progress, and more additions I would like to add. If (when) I rework it I would likely created a Laravel project instead as I've now had some experience with this and appreciate what it has to offer",
       "icon": "tasks"
     },
     "ind-appointment-checker": {
@@ -48,15 +48,15 @@
         "Web Components",
         "SCSS"
       ],
-      "problem": " ",
-      "goal": " ",
-      "process": " ",
-      "results": "",
-      "reflection": " ",
+      "challenge": "During the process of obtaining my verblijftsvergunningen I needed to book two separate IND appointments, for Biometrics and for Document collection. My nearest IND desk was Amsterdam however there seemed to never be any appointments available. To check per desk on the IND website, you must first choose the desk, then click through a calendar, month by month to see whats available. Then if you want to check another desk, you do this process again. My options were to do this multiple times per day in the hopes of stumbling onto an appointment (as was the suggestion from multiple groups of people in the same position), or find another solution.",
+      "goal": "<ul class='withPadding'><li>Discover how to obtain appointment data from IND</li><li>Create an ordered list by time of all appointments across any/all IND desks (per appointment type)</li><li>Ability to choose location(s) to soonest appointment, as well as all other appointments</li><li>Ability to choose number of people appointment is for, per IND limits</li><li>Extend appointment checker to other appointment options (Return Visa, Endorsement Sticker)</li></ul>",
+      "process": "Initially I created the solution for this in the console of the IND's website itself. I looked through the Network processes and found how the site called an API for data, and started manually calling it myself. Within half an hour of starting I had a short function which called the API's and created an ordered list of the four desks I was willing to visit, with appointments ordered by time. I had also in that time booked an upcoming appointment which I was able to see became available during this process.<br/><br/>I wanted to expand on this mini-project, and moved on to making a website for others to use. I was able to find the location codes for each desk, and which desks were available for each appointment type, by looking through the Network calls, and searching the IND website.<br/><br/>As I knew this would be a fairly simple build, I opted to use plain Javascript and Web Components, along with SCSS. I tried to build all parts as efficiently as possible, making it a fast and easy to use site.<br/><br/>I set up an express server on Heroku's free tier to do the calls to the API, and hosted the frontend using GitPages. All revisions of the site build were pushed to a GitHub repo.",
+      "results": "I have successfully used this page over a few months to secure various appointments. I find it easier to navigate and have a broader view of the situation than using the IND site itself. <br/><br/>The main differences are the ability to see much more information in one glance. This allows one to make an educated decision on where to book an appointment, as well as when. <br/><br/>During the Biometrics appointment you can nominate which desk to collect your documents from, or they automatically go to a specific desk depending on your location. This could mean you <strong>have</strong> to attend, say, Amsterdam, even if there are no appointments available in the next three months. While other desks have plenty of appointments available. <br/><br/>I used this information to make the choice of nominating to go to Den Haag, a further distance away, but I was able to complete my process much faster than if I had kept with the allocated desks.",
+      "reflection": "I am overall pleased with the function of the website. The UI design is very basic, while still being usable. It is not the most interesting design, however it is meant to be a utility first and foremost. In saying that, it could definitely use a redesign. ",
       "icon": "appointment"
     },
     "walkers-creek": {
-      "title": "PHP Retail Web Store with Laravel Backend",
+      "title": "Web Store",
       "slug": "walkers-creek",
       "img_src": "",
       "img_alt": "",
@@ -78,11 +78,11 @@
         "SCSS",
         "cPanel"
       ],
-      "problem": " ",
-      "goal": " ",
-      "process": " ",
+      "challenge": "Customer approached me to build a website for their small business in Australia. They currently create camping storage bags and sell them in their car upholstery business. However they are now ready to move having an online store solely for selling these products. They did not want to go with a ready-made solution, such as Squarespace or Shopify, given they wanted strong SEO and finer control over the website than these products provided.<br/><br/>Originally only a shop front was wanted, as products would change or be added so infrequently that they preferred I do those updates. However as the build progressed, and their business leapt forward they realised they were often creating brand new products, and changing existing ones, that it was decided they needed a backend to update themselves. As I know they're very busy people I knew the backend had to be built as simply as possible (to them) so that it took care of most of the work, and the users only had to fill in a minimal of information.",
+      "goal": "<ul class='withPadding'><li>Clean, fast website</li><li>Use best practices for SEO and accessibility</li><li>Site should be optomised for speed, letting the server do the heavy lifting for the user</li><li>Front end needs to get product data from database, and cache this to keep the site fast and limit calls</li><li>In case of updates to the database, site needs to check if it's currently cached data is older than the latest update</li><li>Use Stripe API to handle actual processing of payments</li><li>Backend needs to show purchase details, shipping info etc for business owners</li></ul>",
+      "process": "As I wanted many parts of the frontend to be modular I decided to build this in PHP with Javascript Web Components. ",
       "results": "",
-      "reflection": " ",
+      "reflection": "",
       "icon": "shop"
     },
     "discord-bot": {
@@ -90,7 +90,6 @@
       "slug": "discord-bot",
       "img_src": "",
       "img_alt": "",
-      "liveURL": "https://ameliamargaurite.github.io/ind_biometrics_appt_checker",
       "gitHubURL": "https://github.com/AmeliaMargaurite/ind_biometrics_appt_checker",
       "bulletPoints": [
         "Interactive bot for casual server",
@@ -103,15 +102,15 @@
         "Javascript",
         "Bash"
       ],
-      "problem": " ",
-      "goal": " ",
-      "process": " ",
+      "challenge": "A Discord chatroom required a multi-purpose bot which would take commands from users and reply.",
+      "goal": "Bot requirements were: <ul class='withPadding'> <li>Timer function - allow users to set a timer and the bot notify them when the timer is complete. </li></ul>",
+      "process": "",
       "results": "",
-      "reflection": " ",
+      "reflection": "",
       "icon": "discord"
     },
     "rummikub-og": {
-      "title": "Rummikub - Original Build",
+      "title": "Rummikub - Old Build",
       "slug": "rummikub-og",
       "img_src": "",
       "img_alt": "",
@@ -127,16 +126,16 @@
         "SCSS",
         "cPanel"
       ],
-      "problem": " ",
-      "goal": " ",
-      "process": " ",
+      "challenge": "",
+      "goal": "",
+      "process": "",
       "results": "",
-      "reflection": " ",
+      "reflection": "",
       "icon": "heart",
       "old": true
     },
     "four-in-a-row-og": {
-      "title": "Four In A Row - Original Build",
+      "title": "Four In A Row - Old Build",
       "slug": "four-in-a-row-og",
       "img_src": "",
       "img_alt": "",
@@ -151,16 +150,16 @@
         "SCSS",
         "cPanel"
       ],
-      "problem": " ",
-      "goal": " ",
-      "process": " ",
+      "challenge": "",
+      "goal": "",
+      "process": "",
       "results": "",
-      "reflection": " ",
+      "reflection": "",
       "icon": "dice",
       "old": true
     },
     "task-manager-og": {
-      "title": "Task Manager - Original Build",
+      "title": "Task Manager - Old Build",
       "slug": "task-manager-og",
       "img_src": "",
       "img_alt": "",
@@ -175,11 +174,11 @@
         "Javascript",
         "SCSS"
       ],
-      "problem": " ",
-      "goal": " ",
-      "process": " ",
+      "challenge": "",
+      "goal": "",
+      "process": "",
       "results": "",
-      "reflection": " ",
+      "reflection": "",
       "icon": "clipboard",
       "old": true
     }

@@ -1,8 +1,9 @@
-import { HeadFC } from "gatsby";
-import React, { useState, useEffect } from "react";
+import { HeadFC, Link } from "gatsby";
+import React, { useState, useEffect, useContext } from "react";
 import { Layout } from "../../components/Layout";
 import Picture from "../../components/Picture";
 import { Text } from "../../components/Typography";
+import { SkillsContext } from "../../contexts/SkillsContext";
 import { useProjects } from "../../helpers/useProjects";
 import { ProjectProps, ProjectType } from "../../types/ProjectsTypes";
 import NotFoundPage from "../404";
@@ -13,9 +14,8 @@ export default function ProjectTemplate({ params }: any) {
 	const [project, setProject] = useState<ProjectProps | null | "not_found">(
 		null
 	);
-
 	const projects = useProjects();
-
+	const projectKeys = projects ? Object.keys(projects) : null;
 	useEffect(() => {
 		if (projects) {
 			const project = projects?.[params?.slug] ?? null;
@@ -27,7 +27,7 @@ export default function ProjectTemplate({ params }: any) {
 				setProject("not_found");
 			}
 		}
-	}, [projects]);
+	}, [projects, params]);
 
 	if (loading)
 		return (
@@ -52,52 +52,110 @@ export default function ProjectTemplate({ params }: any) {
 				</span>
 
 				<span className="links__wrapper">
-					<a href={project?.liveURL} target="_blank">
-						<span className="icon live large" />
-						Link to live website
-					</a>
-
-					<a href={project?.gitHubURL} target="_blank">
-						<span className="icon github large" />
-						Link to GitHub Repo
-					</a>
+					{project?.liveURL ? (
+						<a href={project?.liveURL} target="_blank">
+							<span className="icon live large" />
+							Link to live website
+						</a>
+					) : (
+						<></>
+					)}
+					{project?.gitHubURL ? (
+						<a href={project?.gitHubURL} target="_blank">
+							<span className="icon github large" />
+							Link to GitHub Repo
+						</a>
+					) : (
+						<></>
+					)}
 				</span>
 
-				{project?.languages ? (
-					<div className="languages">
-						<p>Languages used:</p>
+				<SkillsComponent project={project} />
+
+				{projects && (
+					<div className="projects-list">
+						<h3>Other projects</h3>
 						<ul className="withPadding">
-							{project.languages.map((language, key) => (
-								<li key={key}>{language}</li>
-							))}
+							{projectKeys &&
+								projectKeys.map((id, key) => {
+									const otherProject = projects[id] ?? null;
+									if (otherProject?.slug !== project?.slug)
+										return (
+											<li key={key}>
+												<Link to={"/projects/" + otherProject?.slug}>
+													{otherProject?.title}
+												</Link>
+											</li>
+										);
+								})}
 						</ul>
 					</div>
-				) : (
-					<></>
 				)}
 
 				<span className="content__wrapper">
-					<p>
-						<strong>Challenge:</strong>{" "}
-						<span dangerouslySetInnerHTML={{ __html: project?.problem }} />
-					</p>
-					<p>
-						<strong>Goal:</strong>{" "}
-						<span dangerouslySetInnerHTML={{ __html: project?.goal }} />
-					</p>
-					<p>
-						<strong>Process:</strong>{" "}
-						<span dangerouslySetInnerHTML={{ __html: project?.process }} />
-					</p>
-					<p>
-						<strong>Reflection:</strong>{" "}
-						<span dangerouslySetInnerHTML={{ __html: project?.reflection }} />
-					</p>
+					{project?.challenge && (
+						<p>
+							<strong>Challenge:</strong>{" "}
+							<span dangerouslySetInnerHTML={{ __html: project?.challenge }} />
+						</p>
+					)}
+					{project?.goal && (
+						<p>
+							<strong>Goals:</strong>{" "}
+							<span dangerouslySetInnerHTML={{ __html: project?.goal }} />
+						</p>
+					)}
+					{project?.process && (
+						<p>
+							<strong>Process:</strong>{" "}
+							<span dangerouslySetInnerHTML={{ __html: project?.process }} />
+						</p>
+					)}
+					{project?.results && (
+						<p>
+							<strong>Results:</strong>{" "}
+							<span dangerouslySetInnerHTML={{ __html: project?.results }} />
+						</p>
+					)}
+					{project?.reflection && (
+						<p>
+							<strong>Reflection:</strong>{" "}
+							<span dangerouslySetInnerHTML={{ __html: project?.reflection }} />
+						</p>
+					)}
 				</span>
 			</Layout>
 		);
 	}
 }
+
+interface SkillsComponentProps {
+	project: ProjectProps;
+}
+
+const SkillsComponent = ({ project }: SkillsComponentProps) => {
+	const skills = useContext(SkillsContext);
+	console.log({ skills });
+
+	if (project?.languages) {
+		return (
+			<div className="languages">
+				<p>Skills used:</p>
+				<ul className="withPadding">
+					{project.languages.map((skill, key) => {
+						const highlight =
+							skills !== null ? skills.includes(skill.toLowerCase()) : false;
+						return (
+							<li className={highlight ? "highlight" : ""} key={key}>
+								{skill}
+							</li>
+						);
+					})}
+				</ul>
+			</div>
+		);
+	} else return <></>;
+};
 
 export const Head: HeadFC = ({ params }) => {
 	const projects = useProjects();

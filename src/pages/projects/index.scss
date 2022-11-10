@@ -64,6 +64,23 @@ main.project__page {
 		border: 1px dashed;
 		width: 100%;
 		height: max-content;
+
+		& li {
+			width: max-content;
+		}
+
+		& li.highlight {
+			background: var(--aqua300);
+			padding: 0 0.8rem;
+			color: var(--light);
+			&::marker {
+				color: initial;
+			}
+		}
+	}
+
+	& .projects-list {
+		grid-row: 5;
 	}
 
 	& .content__wrapper {
@@ -71,6 +88,10 @@ main.project__page {
 
 		row-gap: 1.6rem;
 		grid-column: 1/-1;
+
+		& span {
+			display: block;
+		}
 	}
 
 	@media (min-width: $xsmall) {
@@ -81,7 +102,7 @@ main.project__page {
 
 	@media (min-width: $small) {
 		grid-template-columns: 2fr 1fr;
-		column-gap: 5.6rem;
+		column-gap: 6rem;
 
 		& .title__wrapper {
 			grid-column: unset;
@@ -102,6 +123,12 @@ main.project__page {
 			& ul {
 				column-count: 1;
 			}
+		}
+
+		& .projects-list {
+			align-self: flex-end;
+			grid-column: 2;
+			grid-row: 3;
 		}
 
 		& .content__wrapper {

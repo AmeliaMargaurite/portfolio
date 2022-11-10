@@ -3,12 +3,12 @@ export interface ProjectProps {
 	slug: string;
 	img_src: string;
 	img_alt: string;
-	liveURL: string;
-	gitHubURL: string;
+	liveURL?: string;
+	gitHubURL?: string;
 	description: string;
 	bulletPoints: Array<string>;
 	languages: Array<string>;
-	problem: string;
+	challenge: string;
 	goal: string;
 	process: string;
 	results: string;

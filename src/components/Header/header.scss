@@ -9,6 +9,10 @@ header {
 
 	& .header__info {
 		text-decoration: none;
+		h1 {
+			font-variant: small-caps;
+		}
+
 		p {
 			font-size: 1.4rem;
 		}

@@ -36,7 +36,6 @@ const jobs: JobsType = [
 			"FIGMA",
 			"ADOBE PHOTOSHOP",
 			"ILLUSTRATOR",
-			"PREMIERE PRO",
 			"SCSS",
 		],
 		responsibilities: [
