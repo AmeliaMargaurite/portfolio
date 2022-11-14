@@ -79,6 +79,25 @@ ul.withPadding {
 	border-radius: 4rem;
 }
 
+.intro__wrapper {
+	& h1 {
+		font-size: 3em;
+	}
+	& .highlight {
+		display: inline-grid;
+		justify-items: center;
+		position: relative;
+		color: var(--aqua300);
+
+		// & .icon {
+		// 	width: 3.2rem;
+		// 	height: 3.2rem;
+		// 	// transform: translateY(0);
+		// 	animation: point infinite ease-in-out 2s alternate;
+		// }
+	}
+}
+
 @media (min-width: $small) {
 	h1 {
 		font-size: 2.25em;

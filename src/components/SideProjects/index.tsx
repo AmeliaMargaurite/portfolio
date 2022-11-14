@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ResumeSection } from "../ResumeSection";
 import { Link } from "gatsby";
 import { useProjects } from "../../helpers/useProjects";
 import { Text } from "../Typography";
 import { ProjectProps } from "../../types/ProjectsTypes";
 import "./side-projects.scss";
+import { SkillsContext } from "../../contexts/SkillsContext";
+import { SkillsType } from "../../types/SkillsTypes";
 
 export function SideProjects() {
 	const projects = useProjects();
 	const projectsKeys = projects ? Object.keys(projects) : null;
+	const skills = useContext(SkillsContext);
 
 	return (
 		<ResumeSection className="side-projects">
@@ -23,7 +26,7 @@ export function SideProjects() {
 					projectsKeys.map((id, key) => {
 						const project: ProjectProps | null = projects?.[id] ?? null;
 						return project && key < 3 ? (
-							<Project key={key} {...project} />
+							<Project key={key} {...project} skillsToHighlight={skills} />
 						) : (
 							<React.Fragment key={key} />
 						);
@@ -43,8 +46,9 @@ const Project = ({
 	gitHubURL,
 	description,
 	bulletPoints,
-	languages,
-}: ProjectProps) => {
+	skills,
+	skillsToHighlight,
+}: ProjectProps & { skillsToHighlight: SkillsType | null }) => {
 	return (
 		<div className="project">
 			<Text type="h6" className="project__name">
@@ -65,6 +69,20 @@ const Project = ({
 					</a>
 				</p>
 			</span>
+			<ul className="skills">
+				{skills.map((skill, key) => {
+					const highlight = skillsToHighlight
+						? skillsToHighlight?.includes(skill.toLowerCase())
+						: false;
+
+					return (
+						<li key={key} className={highlight ? "highlight" : ""}>
+							{skill}
+							{skills && key < skills.length - 1 ? "," : ""}
+						</li>
+					);
+				})}
+			</ul>
 			<ul className="withPadding">
 				{bulletPoints &&
 					bulletPoints.map((point, key) => <li key={key}>{point}</li>)}

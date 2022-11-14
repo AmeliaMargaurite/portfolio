@@ -37,6 +37,7 @@ const jobs: JobsType = [
 			"ADOBE PHOTOSHOP",
 			"ILLUSTRATOR",
 			"SCSS",
+			"GITHUB",
 		],
 		responsibilities: [
 			"Worked with customer to design and build WordPress website with WooCommerce store",
@@ -84,11 +85,11 @@ const JobSection = ({ job, skillsToHighlight }: JobSectionProps) => {
 				<Text type="h4" className="company">
 					{job.company}
 				</Text>
-				|
+
 				<Text type="p" bold className="job-title">
 					{job.jobTitle}
 				</Text>
-				|<p className="time-range">{job.timeRange}</p>
+				<p className="time-range">{job.timeRange}</p>
 			</span>
 			{job?.skills && (
 				<ul className="skills">

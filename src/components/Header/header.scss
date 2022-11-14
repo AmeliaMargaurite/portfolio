@@ -1,8 +1,8 @@
 @import "../../scss/mixins";
 
 header {
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-auto-flow: column;
 	align-items: center;
 	color: var(--primary);
 	max-width: 100vw;

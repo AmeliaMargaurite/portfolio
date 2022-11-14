@@ -1,0 +1,75 @@
+{
+  "rummikub-og": {
+    "title": "Rummikub - Old Build",
+    "slug": "rummikub-og",
+    "img_src": "",
+    "img_alt": "",
+    "liveURL": "https://ameliamargaurite.github.io/ind_biometrics_appt_checker",
+    "gitHubURL": "https://github.com/AmeliaMargaurite/ind_biometrics_appt_checker",
+    "bulletPoints": [
+      "Built to play with partner online during COVID separation"
+    ],
+    "description": "Online version of Rummikub board game. Allows up to four players.",
+    "languages": [
+      "Javascript",
+      "Web Components",
+      "SCSS",
+      "cPanel"
+    ],
+    "challenge": "",
+    "goal": "",
+    "process": "",
+    "results": "",
+    "reflection": "",
+    "icon": "heart",
+    "old": true
+  },
+  "four-in-a-row-og": {
+    "title": "Four In A Row - Old Build",
+    "slug": "four-in-a-row-og",
+    "img_src": "",
+    "img_alt": "",
+    "liveURL": "https://ameliamargaurite.github.io/ind_biometrics_appt_checker",
+    "gitHubURL": "https://github.com/AmeliaMargaurite/ind_biometrics_appt_checker",
+    "bulletPoints": [
+      "Built to play with partner online during COVID separation"
+    ],
+    "description": "Online two-player game of 'four-in-a-row'",
+    "languages": [
+      "Javascript",
+      "SCSS",
+      "cPanel"
+    ],
+    "challenge": "",
+    "goal": "",
+    "process": "",
+    "results": "",
+    "reflection": "",
+    "icon": "dice",
+    "old": true
+  },
+  "task-manager-og": {
+    "title": "Task Manager - Old Build",
+    "slug": "task-manager-og",
+    "img_src": "",
+    "img_alt": "",
+    "liveURL": "https://ameliamargaurite.github.io/ind_biometrics_appt_checker",
+    "gitHubURL": "https://github.com/AmeliaMargaurite/ind_biometrics_appt_checker",
+    "bulletPoints": [
+      "First built of Task Manager using Preact and localStorage"
+    ],
+    "description": "Original build of task manager with all data saved locally",
+    "languages": [
+      "Preact",
+      "Javascript",
+      "SCSS"
+    ],
+    "challenge": "",
+    "goal": "",
+    "process": "",
+    "results": "",
+    "reflection": "",
+    "icon": "clipboard",
+    "old": true
+  }
+}

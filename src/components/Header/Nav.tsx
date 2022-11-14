@@ -4,11 +4,14 @@ import { PagesType, PageType } from "../../types/PagesTypes";
 import { MenuButton } from "./MenuButton";
 import "./nav.scss";
 
-interface NavProps {
-	pages: PagesType;
-}
+const pages: PagesType = [
+	{ name: "home", url: "/" },
+	{ name: "projects", url: "/projects" },
+	{ name: "resume", url: "/resume" },
+	// { name: "fun", url: "/fun" },
+];
 
-export default function Nav({ pages }: NavProps) {
+export default function Nav() {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const toggleMenu = () => {
 		setMenuOpen(!menuOpen);

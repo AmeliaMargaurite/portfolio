@@ -1,29 +1,37 @@
 import { Link } from "gatsby";
 import React from "react";
 import { PagesType } from "../../types/PagesTypes";
+import { Text } from "../Typography";
 import "./header.scss";
 import Nav from "./Nav";
 
-const pages: PagesType = [
-	{ name: "home", url: "/" },
-	{ name: "projects", url: "/projects" },
-	{ name: "resume", url: "/resume" },
-	// { name: "fun", url: "/fun" },
-];
+interface HeaderProps {
+	hideLogo: boolean;
+}
 
-export const Header = () => {
+export const Header = ({ hideLogo }: HeaderProps) => {
 	return (
 		<header>
-			<Link to="/" className="header__info">
-				<span>
-					<h1>Amelia</h1>
-					<p>Australian with working rights in the Netherlands</p>
-					<p>
-						<em>Ik ben Nederlands aan het leren</em>
-					</p>
-				</span>
-			</Link>
-			<Nav pages={pages} />
+			{!hideLogo ? (
+				<Link to="/" className="header__info">
+					<span>
+						<h1>Amelia</h1>
+						<p>Australian with working rights in the Netherlands</p>
+						<p>
+							<em>Ik ben Nederlands aan het leren</em>
+						</p>
+					</span>
+				</Link>
+			) : (
+				<Text type="h1" className="intro__wrapper">
+					Hoi,
+					<br /> ik ben{" "}
+					<span className="highlight">
+						Amelia
+					</span>
+				</Text>
+			)}
+			<Nav />
 		</header>
 	);
 };

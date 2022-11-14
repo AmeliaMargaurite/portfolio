@@ -1,3 +1,5 @@
+@import "../../scss/variables";
+
 section.work-history {
 	.jobs-section {
 		& .title__wrapper {
@@ -6,20 +8,15 @@ section.work-history {
 			align-items: center;
 			column-gap: 0.8rem;
 			line-height: 1;
-		}
 
-		& .skills {
-			display: flex;
-			flex-wrap: wrap;
-			column-gap: 0.8rem;
-			font-style: italic;
+			@media (min-width: $xsmall) {
+				& p {
+					display: inline-flex;
+					column-gap: 0.8rem;
 
-			li {
-				list-style: none;
-
-				&.highlight {
-					background: var(--aqua300);
-					padding: 0 0.8rem;
+					&::before {
+						content: "|";
+					}
 				}
 			}
 		}

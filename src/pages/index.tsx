@@ -78,19 +78,14 @@ const IndexPage = () => {
 	console.log({ skills });
 
 	return (
-		<Layout className="home">
-			<section>
-				<Text type="h3">About me</Text>
-				<span className="wrapper">
-					<ul className="withPadding">
-						<li>Continual learning, continual improvement</li>
-						<li>Passion for clean and accessible UI/UX </li>
-						<li>Team player, and ownership-taker</li>
-					</ul>
-				</span>
-			</section>
-			<section>
-				<p>I stumbled into web development when I wanted to create my own website for my own small business. From there, I built and learned, built and learned. As I continue to this day.</p>
+		<Layout className="home" hideLogo>
+			<section className="spinning-info__wrapper">
+				<div className="spinning-info">
+					<span className="front">Web Developer</span>
+					<span className="back">Enthusiastic learner</span>
+					<span className="top">Creative</span>
+					<span className="bottom">Determined</span>
+				</div>
 			</section>
 			<section>
 				<Text type="h3">My work in action</Text>{" "}

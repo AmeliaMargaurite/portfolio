@@ -17,6 +17,7 @@ import { SkillsType } from "../../types/SkillsTypes";
 interface LayoutProps {
 	children: any;
 	className?: string;
+	hideLogo?: boolean;
 }
 
 // const initialState = { skills: null, setSkills: () => {} };
@@ -26,12 +27,16 @@ interface LayoutProps {
 // 	setSkills: (e: Array<string> | null) => void;
 // }>(initialState);
 
-export const Layout = ({ children, className = "" }: LayoutProps) => {
+export const Layout = ({
+	children,
+	className = "",
+	hideLogo = false,
+}: LayoutProps) => {
 	return (
 		<SkillsWrapper>
 			<div className={`${className} body auto-dark-mode `}>
 				<div className="layout__wrapper">
-					<Header />
+					<Header hideLogo={hideLogo} />
 					<main className={className ?? ""}>{children}</main>
 					<Footer />
 				</div>

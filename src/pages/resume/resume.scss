@@ -12,4 +12,21 @@ main.resume {
 		display: grid;
 		row-gap: 2.4rem;
 	}
+
+	& .skills {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 0.8rem;
+		font-style: italic;
+		text-transform: uppercase;
+
+		li {
+			list-style: none;
+
+			&.highlight {
+				background: var(--aqua300);
+				padding: 0 0.8rem;
+			}
+		}
+	}
 }

@@ -1,7 +1,15 @@
 .home {
 	&.body {
 		overflow: hidden;
+		& header {
+			padding-bottom: 0;
+		}
 	}
+
+	& .intro__wrapper {
+		font-size: 2.4em;
+	}
+
 	.project-card__wrapper {
 		display: flex;
 		flex-wrap: wrap;
@@ -15,6 +23,104 @@
 
 		@media (min-width: $medium) {
 			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	& .spinning-info {
+		&__wrapper {
+			--width: 100%;
+			--height: 10rem;
+			padding: 0 !important;
+			width: var(--width);
+			height: var(--height);
+			perspective: 60rem;
+		}
+
+		// https://3dtransforms.desandro.com/cube
+
+		position: relative;
+		width: 100%;
+		height: 100%;
+		transform-style: preserve-3d;
+		transform: translateZ(calc(var(--height) / 2 * -1)) rotateY(0deg);
+		transition: transform 1s;
+		animation: spin 6s linear;
+
+		// have four child spans to spin
+		& span {
+			position: absolute;
+			width: var(--width);
+			height: var(--height);
+			display: grid;
+			align-content: center;
+			text-align: center;
+			font-size: 3.2rem;
+			text-transform: uppercase;
+			background: var(--aqua300);
+
+			&.front {
+				transform: rotateY(0deg) translateZ(calc(var(--height) / 2));
+				background: var(--mix-colors-orange);
+			}
+
+			&.back {
+				transform: translateZ(calc(var(--height) / 2 * -1)) rotateX(180deg);
+			}
+
+			&.top {
+				transform: rotateX(90deg) translateZ(calc(var(--height) / 2));
+			}
+
+			&.bottom {
+				transform: rotateX(-90deg) translateZ(calc(var(--height) / 2));
+			}
+		}
+
+		@keyframes spin {
+			0% {
+				transform: translateZ(calc(var(--height) / 2 * -1)) rotateX(0deg);
+			}
+
+			20% {
+				transform: translateZ(calc(var(--height) / 2 * -1)) rotateX(90deg);
+			}
+
+			25% {
+				transform: translateZ(calc(var(--height) / 2 * -1)) rotateX(90deg);
+			}
+
+			45% {
+				transform: translateZ(calc(var(--height) / 2 * -1)) rotateX(180deg);
+			}
+
+			50% {
+				transform: translateZ(calc(var(--height) / 2 * -1)) rotateX(180deg);
+			}
+
+			70% {
+				transform: translateZ(calc(var(--height) / 2 * -1)) rotateX(270deg);
+			}
+
+			75% {
+				transform: translateZ(calc(var(--height) / 2 * -1)) rotateX(270deg);
+			}
+
+			95% {
+				transform: translateZ(calc(var(--height) / 2 * -1)) rotateX(360deg);
+			}
+
+			100% {
+				transform: translateZ(calc(var(--height) / 2 * -1)) rotateX(360deg);
+			}
+		}
+	}
+
+	@media (min-width: $small) {
+		& .spinning-info__wrapper {
+			--width: 30rem;
+		}
+		& .intro__wrapper {
+			font-size: 2em;
 		}
 	}
 }

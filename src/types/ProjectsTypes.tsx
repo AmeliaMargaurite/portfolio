@@ -7,7 +7,7 @@ export interface ProjectProps {
 	gitHubURL?: string;
 	description: string;
 	bulletPoints: Array<string>;
-	languages: Array<string>;
+	skills: Array<string>;
 	challenge: string;
 	goal: string;
 	process: string;
