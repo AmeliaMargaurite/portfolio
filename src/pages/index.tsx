@@ -34,7 +34,13 @@ const IndexPage = () => {
 						projectsKeys.map((id, key) => {
 							const project = projects?.[id];
 							if (project && key < 3) {
-								return <ProjectCard project={project} key={key} />;
+								return (
+									<ProjectCard
+										project={project}
+										key={key}
+										className={key === 2 ? "stretch" : ""}
+									/>
+								);
 							}
 						})}
 				</ul>

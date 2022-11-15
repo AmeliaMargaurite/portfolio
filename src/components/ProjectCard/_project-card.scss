@@ -91,13 +91,13 @@
 	}
 	// var(--small): var(--small);
 	@media (min-width: $small) {
-		&:last-child {
+		&.stretch {
 			grid-column: 1/-1;
 		}
 	}
 
 	@media (min-width: $medium) {
-		&:last-child {
+		&.stretch {
 			grid-column: unset;
 		}
 	}

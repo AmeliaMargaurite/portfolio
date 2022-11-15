@@ -14,6 +14,7 @@ export default function ProjectTemplate({ params }: any) {
 	);
 	const projects = useProjects();
 	const projectKeys = projects ? Object.keys(projects) : null;
+	
 	useEffect(() => {
 		if (projects) {
 			const project = projects?.[params?.slug] ?? null;
@@ -34,14 +35,14 @@ export default function ProjectTemplate({ params }: any) {
 			</Layout>
 		);
 
-	if (project === "not_found")
+	if (projects && project === "not_found")
 		return (
 			<Layout>
 				<div>Project not found</div>
 			</Layout>
 		);
 
-	if (project !== null && !loading) {
+	if (project !== null && project !== "not_found" && !loading) {
 		return (
 			<Layout className="project__page paper">
 				<span className="title__wrapper">

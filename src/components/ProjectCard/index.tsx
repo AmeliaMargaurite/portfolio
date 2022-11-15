@@ -6,14 +6,17 @@ import { SkillType } from "../../types/SkillsTypes";
 
 interface ProjectCardProps {
 	project: ProjectProps;
+	className?: string;
 }
 
-export const ProjectCard = ({ project }: ProjectCardProps) => {
+export const ProjectCard = ({ project, className = "" }: ProjectCardProps) => {
 	const skills = useContext(SkillsContext);
 	useEffect(() => {}, [skills]);
 
 	return (
-		<span className={`project-card ${project?.old ? "old-code" : ""}`}>
+		<span
+			className={`project-card ${project?.old ? "old-code" : ""} ${className}`}
+		>
 			<Link to={"/projects/" + project.slug}>
 				<span className="icon-circle__wrapper">
 					<span className={`icon large ${project.icon}`}> </span>
