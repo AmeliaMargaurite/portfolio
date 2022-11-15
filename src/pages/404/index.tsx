@@ -5,7 +5,7 @@ import { Layout } from "../../components/Layout";
 const NotFoundPage = () => {
 	return (
 		<Layout className="error-page">
-			Whoops, not sure what happene there.
+			Whoops, not sure what happened there.
 			<Link to="/">Click here to go home</Link>
 		</Layout>
 	);
