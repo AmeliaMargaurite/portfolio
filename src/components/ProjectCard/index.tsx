@@ -1,5 +1,5 @@
 import { Link } from "gatsby";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { SkillsContext } from "../../contexts/SkillsContext";
 import { ProjectProps } from "../../types/ProjectsTypes";
 import { SkillType } from "../../types/SkillsTypes";
@@ -10,6 +10,7 @@ interface ProjectCardProps {
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
 	const skills = useContext(SkillsContext);
+	useEffect(() => {}, [skills]);
 
 	return (
 		<span className={`project-card ${project?.old ? "old-code" : ""}`}>
