@@ -3,8 +3,8 @@
     "task-manager": {
       "title": "Task Manager with Calendar",
       "slug": "task-manager",
-      "img_src": "task-manager-screenshot.png",
-      "img_alt": "alt for screenshot",
+      "img_src": "task-manager",
+      "img_alt": "Screenshots of task manager mobile view, superimposed on mobile phone held by hand",
       "liveURL": "https://task-manager.everlearning.com.au/login/?username=guest&password=GuestPassword1!",
       "gitHubURL": "https://github.com/AmeliaMargaurite/everlearning-task-manager",
       "description": "Decluttered task manager with calendar view to plan projects. Allows for multiple users, multiple projects, categorising, CRUD operations. cPanel hosting with MySql database.",
@@ -20,7 +20,8 @@
         "Javascript",
         "Web Components",
         "cPanel",
-        "GitHub"
+        "GitHub",
+        "SCSS"
       ],
       "challenge": "Create a task manager which suited best my needs",
       "goal": "<ul class='withPadding'><li>Create decluttered task manager with kanban boards and calendar</li><li>Focus on clean, minimal design.</li><li>Show only options which I personally require (due date, categories etc) </li><li>Usable across mobile and desktop with same login and data</li></ul>",
@@ -32,8 +33,8 @@
     "ind-appointment-checker": {
       "title": "IND Appointment Checker",
       "slug": "ind-appointment-checker",
-      "img_src": "",
-      "img_alt": "",
+      "img_src": "ind-checker",
+      "img_alt": "Screenshots of IND appointment checker desktop with mobile screenshot.",
       "liveURL": "https://ind-checker.everlearning.com.au/",
       "gitHubURL": "https://github.com/AmeliaMargaurite/ind_biometrics_appt_checker",
       "bulletPoints": [
@@ -60,8 +61,8 @@
     "walkers-creek": {
       "title": "Web Store",
       "slug": "walkers-creek",
-      "img_src": "",
-      "img_alt": "",
+      "img_src": "walkers-creek",
+      "img_alt": "Screenshots of Walkers Creek front end website in desktop and mobile, with admin site mobile screenshot.",
       "liveURL": "https://www.walkerscreek.com.au",
       "gitHubURL": "https://github.com/AmeliaMargaurite/walkers-creek",
       "bulletPoints": [
@@ -91,8 +92,8 @@
     "discord-bot": {
       "title": "Discord Bot",
       "slug": "discord-bot",
-      "img_src": "",
-      "img_alt": "",
+      "img_src": "discord-bot",
+      "img_alt": "Image of wooden robot like toy with screw for an antenna.",
       "gitHubURL": "https://github.com/AmeliaMargaurite/botty-bot-bot",
       "bulletPoints": [
         "Interactive bot for casual chat server",

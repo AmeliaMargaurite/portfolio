@@ -2,7 +2,6 @@ import { Link } from "gatsby";
 import React, { useState } from "react";
 import { PagesType, PageType } from "../../types/PagesTypes";
 import { MenuButton } from "./MenuButton";
-import "./nav.scss";
 
 const pages: PagesType = [
 	{ name: "home", url: "/" },

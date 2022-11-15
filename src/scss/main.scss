@@ -2,6 +2,8 @@
 @import "./variables";
 @import "./home";
 @import "./icons";
+@import "./components";
+@import "../pages/index.scss";
 
 * {
 	padding: 0;
@@ -37,15 +39,15 @@ h2 {
 }
 
 h3 {
-	font-size: 1.3em;
+	font-size: 1.4em;
 }
 
 h4 {
-	font-size: 1.05em;
+	font-size: 1.15em;
 }
 
 h5 {
-	font-size: 1em;
+	font-size: 1.05em;
 }
 
 h6 {
@@ -88,13 +90,6 @@ ul.withPadding {
 		justify-items: center;
 		position: relative;
 		color: var(--aqua300);
-
-		// & .icon {
-		// 	width: 3.2rem;
-		// 	height: 3.2rem;
-		// 	// transform: translateY(0);
-		// 	animation: point infinite ease-in-out 2s alternate;
-		// }
 	}
 }
 

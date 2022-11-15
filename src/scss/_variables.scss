@@ -43,18 +43,6 @@
 	--body-background-image: var(--background-image-dark);
 	--paper: #fbfaf7;
 	--paper-background: linear-gradient(var(--paper), #ffffffc7);
-
-	// @media (prefers-color-scheme: dark) {
-	// 	--primary: var(--light);
-	// 	--secondary: var(--dark);
-	// 	--body-background-image: var(--background-image-dark);
-	// }
-
-	// @media (prefers-color-scheme: light) {
-	// 	--primary: var(--dark);
-	// 	--secondary: var(--light);
-	// 	--body-background-image: var(--background-image-light);
-	// }
 }
 
 // BREAKPOINTS
@@ -65,5 +53,4 @@ $small: 768px;
 $medium: 1024px;
 $large: 1440px;
 $xlarge: 2560px;
-
 $wholeMenuMinWidth: $small;

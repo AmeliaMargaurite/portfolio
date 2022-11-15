@@ -1,8 +1,6 @@
 import { Link } from "gatsby";
 import React from "react";
-import { PagesType } from "../../types/PagesTypes";
 import { Text } from "../Typography";
-import "./header.scss";
 import Nav from "./Nav";
 
 interface HeaderProps {
@@ -25,10 +23,7 @@ export const Header = ({ hideLogo }: HeaderProps) => {
 			) : (
 				<Text type="h1" className="intro__wrapper">
 					Hoi,
-					<br /> ik ben{" "}
-					<span className="highlight">
-						Amelia
-					</span>
+					<br /> ik ben <span className="highlight">Amelia</span>
 				</Text>
 			)}
 			<Nav />

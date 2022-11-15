@@ -1,10 +1,8 @@
 import { Link } from "gatsby";
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { SkillsContext } from "../../contexts/SkillsContext";
-import { LinkType } from "../../types/LinksTypes";
-import { ProjectProps, ProjectType } from "../../types/ProjectsTypes";
-import { SkillsType, SkillType } from "../../types/SkillsTypes";
-import "./project-card.scss";
+import { ProjectProps } from "../../types/ProjectsTypes";
+import { SkillType } from "../../types/SkillsTypes";
 
 interface ProjectCardProps {
 	project: ProjectProps;

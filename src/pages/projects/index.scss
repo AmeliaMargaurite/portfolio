@@ -1,5 +1,3 @@
-@import "../../scss/variables";
-
 main.project__page {
 	--clip-width: 1.6rem;
 	--clip-start: calc(var(--page-margin) + 1.6rem);
@@ -48,6 +46,8 @@ main.project__page {
 	}
 	& .hero {
 		max-width: 100%;
+		height: auto;
+		border-radius: 0.8rem;
 	}
 
 	& .links__wrapper {

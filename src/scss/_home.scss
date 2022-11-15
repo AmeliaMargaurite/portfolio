@@ -57,6 +57,7 @@
 			font-size: 3.2rem;
 			text-transform: uppercase;
 			background: var(--aqua300);
+			// border-radius: 1.6rem;
 
 			&.front {
 				transform: rotateY(0deg) translateZ(calc(var(--height) / 2));

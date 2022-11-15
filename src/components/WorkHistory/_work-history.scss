@@ -1,12 +1,18 @@
-@import "../../scss/variables";
-
 section.work-history {
 	.jobs-section {
+		display: grid;
+		row-gap: 0.8rem;
+
+		& .skills {
+			line-height: 1;
+		}
+
 		& .title__wrapper {
 			display: flex;
 			flex-wrap: wrap;
 			align-items: center;
 			column-gap: 0.8rem;
+			row-gap: 0.4rem;
 			line-height: 1;
 
 			@media (min-width: $xsmall) {
@@ -19,10 +25,6 @@ section.work-history {
 					}
 				}
 			}
-		}
-
-		& .responsibilities {
-			margin-top: 0.8rem;
 		}
 	}
 }

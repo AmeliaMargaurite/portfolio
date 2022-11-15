@@ -6,8 +6,6 @@ import { Text } from "../../components/Typography";
 import { SkillsContext } from "../../contexts/SkillsContext";
 import { useProjects } from "../../helpers/useProjects";
 import { ProjectProps, ProjectType } from "../../types/ProjectsTypes";
-import NotFoundPage from "../404";
-import "./index.scss";
 
 export default function ProjectTemplate({ params }: any) {
 	const [loading, setLoading] = useState(true);
@@ -47,7 +45,12 @@ export default function ProjectTemplate({ params }: any) {
 		return (
 			<Layout className="project__page paper">
 				<span className="title__wrapper">
-					<Picture name="t" alt="t" className="hero" width="auto" />
+					<Picture
+						name={project?.img_src}
+						alt={project?.img_alt}
+						className="hero"
+						width="auto"
+					/>
 					<Text type="h1">{project?.title}</Text>
 				</span>
 
@@ -137,12 +140,12 @@ const SkillsComponent = ({ project }: SkillsComponentProps) => {
 	const skills = useContext(SkillsContext);
 	console.log({ skills });
 
-	if (project?.languages) {
+	if (project?.skills) {
 		return (
 			<div className="languages">
 				<p>Skills used:</p>
 				<ul className="withPadding">
-					{project.languages.map((skill, key) => {
+					{project.skills.map((skill, key) => {
 						const highlight =
 							skills !== null ? skills.includes(skill.toLowerCase()) : false;
 						return (

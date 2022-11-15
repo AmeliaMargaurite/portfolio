@@ -3,7 +3,7 @@ import { SkillsContext } from "../../contexts/SkillsContext";
 import { JobsType, JobType } from "../../types/JobsTypes";
 import { ResumeSection } from "../ResumeSection";
 import { Text } from "../Typography";
-import "./work-history.scss";
+
 
 const jobs: JobsType = [
 	{

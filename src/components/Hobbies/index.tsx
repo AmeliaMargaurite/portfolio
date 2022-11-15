@@ -1,7 +1,6 @@
 import React from "react";
 import { ResumeSection } from "../ResumeSection";
 import { Text } from "../Typography";
-import "./hobbies.scss";
 
 export function Hobbies() {
 	return (

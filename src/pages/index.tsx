@@ -8,74 +8,14 @@ import { LinkType, LinksType } from "../types/LinksTypes";
 // import icon16 from "../images/favicon-16x16.png";
 // import iconManifest from "../images/site.webmanifest";
 import { Text } from "../components/Typography";
-import "./index.scss";
+// import "./index.scss";
 import { SkillsContext } from "../contexts/SkillsContext";
 import { useProjects } from "../helpers/useProjects";
-import { ProjectProps, ProjectType } from "../types/ProjectsTypes";
-
-// const links: LinksType = [
-// 	{
-// 		text: "Task Manager with Calendar",
-// 		url: "/projects/task-manager",
-// 		description:
-// 			"Decluttered but powerful task manager to actually get work done.",
-// 		color: "--mix-colors-cyan",
-// 		icon: "tasks",
-// 		skills: [
-// 			"html",
-// 			"javascript",
-// 			"web components",
-// 			"MySql",
-// 			"phpmyadmin",
-// 			"php",
-// 			"scss",
-// 		],
-// 	},
-// 	{
-// 		text: "IND Appointment Checker",
-// 		url: "/projects/ind-appointment-checker",
-// 		description:
-// 			"An easy to use tool to see an overview of available appointments at IND desks",
-// 		color: "--mix-colors-aqua",
-// 		icon: "appointment",
-// 		skills: [
-// 			"html",
-// 			"javascript",
-// 			"web components",
-// 			"expressjs",
-// 			"node",
-// 			"scss",
-// 		],
-// 	},
-// 	{
-// 		text: "Retail store with Laravel backend",
-// 		url: "/projects/walkers-creek",
-// 		description:
-// 			"Custom built retail store for Australian camping goods, with Laravel backend added at the end of the project",
-// 		color: "--mix-colors-green",
-// 		icon: "shop",
-// 		skills: [
-// 			"html",
-// 			"javascript",
-// 			"web components",
-// 			"Laravel",
-// 			"php",
-// 			"phpmyadmin",
-// 			"sql",
-// 			"cpanel",
-// 			"scss",
-// 		],
-// 	},
-// ];
 
 const IndexPage = () => {
 	const projects = useProjects();
 	const projectsKeys = projects ? Object.keys(projects) : null;
 	const skills = useContext(SkillsContext);
-	// useEffect(() => {}, [skills, setSkills]);
-	// setSkills(["boop"]);
-	// const skills = [""];
-	console.log({ skills });
 
 	return (
 		<Layout className="home" hideLogo>

@@ -1,18 +1,3 @@
-main.home {
-	// section:nth-child(1) {
-	// 	position: relative;
-	// 	padding: 3.2rem 0;
-	// 	z-index: 1;
-
-	// 	&::before {
-	// 		position: absolute;
-	// 		content: "";
-	// 		width: 200vw;
-	// 		height: 100%;
-	// 		left: -50vw;
-	// 		// background: var(--aqua300);
-	// 		opacity: 0.5;
-	// 		z-index: -1;
-	// 	}
-	// }
-}
+@import "./fun/fun.scss";
+@import "./projects/index.scss";
+@import "./resume/resume.scss";

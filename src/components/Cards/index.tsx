@@ -1,8 +1,6 @@
-import React, { useContext, useEffect } from "react";
-import { SkillsContext } from "../../contexts/SkillsContext";
+import React from "react";
 import { useProjects } from "../../helpers/useProjects";
 import { ProjectCard } from "../ProjectCard";
-import "./cards.scss";
 
 export const Cards = () => {
 	const projects = useProjects();

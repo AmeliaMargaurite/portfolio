@@ -1,4 +1,3 @@
-@import "../../scss/variables";
 // is a li
 .project-card {
 	position: relative;
@@ -90,7 +89,7 @@
 			transform: scale(1);
 		}
 	}
-
+	// var(--small): var(--small);
 	@media (min-width: $small) {
 		&:last-child {
 			grid-column: 1/-1;

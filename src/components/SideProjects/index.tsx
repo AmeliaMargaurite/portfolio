@@ -4,7 +4,6 @@ import { Link } from "gatsby";
 import { useProjects } from "../../helpers/useProjects";
 import { Text } from "../Typography";
 import { ProjectProps } from "../../types/ProjectsTypes";
-import "./side-projects.scss";
 import { SkillsContext } from "../../contexts/SkillsContext";
 import { SkillsType } from "../../types/SkillsTypes";
 
@@ -51,7 +50,7 @@ const Project = ({
 }: ProjectProps & { skillsToHighlight: SkillsType | null }) => {
 	return (
 		<div className="project">
-			<Text type="h6" className="project__name">
+			<Text type="h4" className="project__name">
 				{title}
 			</Text>
 			<span className="links__wrapper">
