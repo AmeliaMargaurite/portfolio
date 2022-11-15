@@ -27,7 +27,7 @@ const IndexPage = () => {
 					<span className="bottom">Determined</span>
 				</div>
 			</section>
-			<section>
+			<section className="grid three second">
 				<Text type="h3">My work in action</Text>{" "}
 				<ul className="project-card__wrapper">
 					{projectsKeys &&

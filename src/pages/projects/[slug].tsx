@@ -14,7 +14,7 @@ export default function ProjectTemplate({ params }: any) {
 	);
 	const projects = useProjects();
 	const projectKeys = projects ? Object.keys(projects) : null;
-	
+
 	useEffect(() => {
 		if (projects) {
 			const project = projects?.[params?.slug] ?? null;

@@ -118,3 +118,10 @@ ul.withPadding {
 		font-size: 1em;
 	}
 }
+
+.grid {
+	display: grid;
+	.three.middle {
+		grid-template-rows: max-content auto max-content;
+	}
+}

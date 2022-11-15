@@ -16,7 +16,7 @@ export const Cards = () => {
 					}
 				})
 			) : (
-				<p>No projects found</p>
+				<div />
 			)}
 		</div>
 	);
