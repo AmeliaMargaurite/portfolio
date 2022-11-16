@@ -1,7 +1,6 @@
 import React, { createContext, useState, useEffect, useContext } from "react";
 import { SkillsType, SkillType } from "../types/SkillsTypes";
 
-
 export const SkillsContext = createContext<SkillsType | null>(null);
 
 export const SkillsWrapper = ({ children }: any) => {
@@ -11,7 +10,7 @@ export const SkillsWrapper = ({ children }: any) => {
 		const params = new URLSearchParams(windowUrl);
 		const skillsParams = params
 			.getAll("skill")
-			.map((skill) => skill.toLowerCase());
+			.map((skill) => skill.toLowerCase().split("-").join(" "));
 		const skillsStored = window.localStorage.getItem("skills");
 		const savedSkills = skillsStored ? JSON.parse(skillsStored) : null;
 

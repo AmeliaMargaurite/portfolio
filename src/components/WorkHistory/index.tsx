@@ -4,7 +4,6 @@ import { JobsType, JobType } from "../../types/JobsTypes";
 import { ResumeSection } from "../ResumeSection";
 import { Text } from "../Typography";
 
-
 const jobs: JobsType = [
 	{
 		company: "Compare the Market Australia",
@@ -15,7 +14,7 @@ const jobs: JobsType = [
 			"GITHUB",
 			"REACT",
 			"TYPESCRIPT",
-			"STYLED COMPONENT",
+			"STYLED COMPONENTS",
 			"FIGMA",
 		],
 		responsibilities: [
