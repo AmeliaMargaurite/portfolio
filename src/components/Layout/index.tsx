@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Header } from "../Header";
 import { Footer } from "../Footer";
 import "./layout.scss";
 import "../../scss/main.scss";
-import { SkillsWrapper } from "../../contexts/SkillsContext";
+import { SkillsContext, SkillsWrapper } from "../../contexts/SkillsContext";
 
 interface LayoutProps {
 	children: any;
@@ -16,6 +16,8 @@ export const Layout = ({
 	className = "",
 	hideLogo = false,
 }: LayoutProps) => {
+	const skills = useContext(SkillsContext);
+	useEffect(() => {}, [skills]);
 	return (
 		<SkillsWrapper>
 			<div className={`${className} body auto-dark-mode `}>
