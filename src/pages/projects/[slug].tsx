@@ -7,7 +7,7 @@ import { SkillsContext } from "../../contexts/SkillsContext";
 import { useProjects } from "../../helpers/useProjects";
 import { ProjectProps, ProjectType } from "../../types/ProjectsTypes";
 
-export default function ProjectTemplate({ params }: any) {
+const ProjectTemplate = ({ params }: any) => {
 	const [loading, setLoading] = useState(true);
 	const [project, setProject] = useState<ProjectProps | null | "not_found">(
 		null
@@ -131,7 +131,7 @@ export default function ProjectTemplate({ params }: any) {
 			</Layout>
 		);
 	}
-}
+};
 
 interface SkillsComponentProps {
 	project: ProjectProps;
@@ -160,6 +160,8 @@ const SkillsComponent = ({ project }: SkillsComponentProps) => {
 		);
 	} else return <></>;
 };
+
+export default ProjectTemplate;
 
 export const Head: HeadFC = ({ params }) => {
 	const projects = useProjects();

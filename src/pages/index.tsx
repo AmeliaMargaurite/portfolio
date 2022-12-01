@@ -1,26 +1,44 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useRef, useCallback } from "react";
 import { HeadFC, Link } from "gatsby";
 import { Layout } from "../components/Layout";
 import { ProjectCard } from "../components/ProjectCard";
-import { LinkType, LinksType } from "../types/LinksTypes";
 // import icon180 from "../images/apple-touch-icon.png";
 // import icon32 from "../images/favicon-32x32.png";
 // import icon16 from "../images/favicon-16x16.png";
 // import iconManifest from "../images/site.webmanifest";
 import { Text } from "../components/Typography";
-// import "./index.scss";
-import { SkillsContext } from "../contexts/SkillsContext";
 import { useProjects } from "../helpers/useProjects";
 
 const IndexPage = () => {
 	const projects = useProjects();
 	const projectsKeys = projects ? Object.keys(projects) : null;
-	const skills = useContext(SkillsContext);
+
+	const spinningInfo = useRef<any>();
+
+	const activateSpinner = useCallback(() => {
+		if (
+			spinningInfo &&
+			spinningInfo.current &&
+			!spinningInfo.current.classList.contains("active")
+		) {
+			spinningInfo.current.classList.add("active");
+			setTimeout(() => {
+				spinningInfo.current.classList.remove("active");
+			}, 6000);
+		}
+	}, []);
+
+	useEffect(() => {
+		if (spinningInfo && spinningInfo.current) {
+			activateSpinner();
+			spinningInfo.current.addEventListener("click", activateSpinner);
+		}
+	}, []);
 
 	return (
 		<Layout className="home" hideLogo>
 			<section className="spinning-info__wrapper">
-				<div className="spinning-info">
+				<div className="spinning-info" ref={spinningInfo}>
 					<span className="front">Web Developer</span>
 					<span className="back">Enthusiastic learner</span>
 					<span className="top">Creative</span>

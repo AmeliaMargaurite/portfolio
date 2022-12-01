@@ -42,7 +42,7 @@ const jobs: JobsType = [
 			"Worked with customer to design and build WordPress website with WooCommerce store",
 			"Improved business reach following SEO best practises, ensuring customer site shown on first page of Google searches regarding their products and services in Australia",
 			"Created digital and physical portrait artworks based on customer supplied data",
-			"Designed and conducted classes art classes for adults and children, online and in person",
+			"Designed and conducted art classes for adults and children, online and in person",
 		],
 	},
 	{

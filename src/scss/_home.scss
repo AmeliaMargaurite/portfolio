@@ -41,10 +41,14 @@
 		position: relative;
 		width: 100%;
 		height: 100%;
+		cursor: pointer;
 		transform-style: preserve-3d;
 		transform: translateZ(calc(var(--height) / 2 * -1)) rotateY(0deg);
 		transition: transform 1s;
-		animation: spin 6s linear;
+
+		&.active {
+			animation: spin 6s linear;
+		}
 
 		// have four child spans to spin
 		& span {
