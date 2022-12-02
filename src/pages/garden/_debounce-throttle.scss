@@ -1,0 +1,92 @@
+.debounce-throttle {
+	--transp-white: #ffffff42;
+	grid-auto-rows: max-content;
+
+	&__description {
+		width: 75%;
+		background: var(--transp-white);
+		padding: 0.8rem;
+	}
+
+	.search__panel {
+		position: relative;
+		height: max-content;
+		// display: grid;
+		// grid-auto-rows: max-content;
+
+		ul.search__result,
+		input.search {
+			border: 1px solid var(--aqua300);
+		}
+
+		input.search {
+			width: 100%;
+			border-radius: 0.8rem;
+			outline: none;
+
+			&.results {
+				border-bottom-right-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+		}
+
+		ul.search__result {
+			position: absolute;
+			top: 100%;
+			width: 100%;
+			list-style-type: none;
+			background: white;
+			color: black;
+			padding: 1.6rem;
+			border-bottom-right-radius: 0.8rem;
+			border-bottom-left-radius: 0.8rem;
+			max-height: 30vh;
+			overflow-y: scroll;
+
+			& li {
+				cursor: pointer;
+				padding: 0.8rem;
+
+				&:hover {
+					background: var(--aqua200);
+				}
+			}
+		}
+	}
+
+	ul.works__results {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		row-gap: 1.6rem;
+		column-gap: 1.6rem;
+
+		& .book__card {
+			display: grid;
+			grid-template-rows: max-content max-content auto;
+			background: var(--transp-white);
+			color: black;
+			padding: 0.8rem;
+			border-radius: 0.8rem;
+			align-items: center;
+
+			& p {
+				color: var(--aqua100);
+				& span {
+					color: var(--light);
+				}
+			}
+
+			& .image {
+				align-self: center;
+				// justify-self: ;
+				display: flex;
+				justify-self: center;
+				align-items: center;
+				object-fit: contain;
+				max-height: 100%;
+				max-width: 100%;
+				border-radius: 0.8rem;
+			}
+		}
+	}
+}

@@ -1,3 +1,11 @@
+@import "./debounce-throttle";
+
+.garden {
+	section {
+		grid-auto-rows: max-content;
+	}
+}
+
 .fun {
 	--stroop-color900: rgb(177, 98, 46);
 	--stroop-color800: rgb(250, 244, 232);

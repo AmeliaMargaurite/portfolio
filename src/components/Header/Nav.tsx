@@ -7,7 +7,7 @@ const pages: PagesType = [
 	{ name: "home", url: "/" },
 	{ name: "projects", url: "/projects" },
 	{ name: "resume", url: "/resume" },
-	// { name: "fun", url: "/fun" },
+	{ name: "garden", url: "/garden" },
 ];
 
 export default function Nav() {
@@ -21,7 +21,11 @@ export default function Nav() {
 			<ul>
 				{pages.map((page: PageType) => (
 					<li key={page.url}>
-						<Link to={page.url} activeClassName="active">
+						<Link
+							to={page.url}
+							activeClassName="active"
+							className={`nav__${page.name}`}
+						>
 							{page.name}
 						</Link>
 					</li>

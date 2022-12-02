@@ -1,27 +1,28 @@
 export const throttleFunction = (callBack: (e?: any) => any, delay = 1000) => {
 	let wait = false;
-	let waitingArgs: null | any = null;
+	let waitingArgs: undefined | any;
 
 	const timeoutFunction = () => {
-		if (waitingArgs === null) {
+		if (waitingArgs == null) {
 			wait = false;
 		} else {
-			console.log(waitingArgs, delay, "hello");
 			callBack(...waitingArgs);
 			waitingArgs = null;
 			setTimeout(timeoutFunction, delay);
 		}
 	};
 
-  return (...args: any[]) => {
+	console.log(wait);
 
-    if (wait) {
+	return (...args: any[]) => {
+		if (wait) {
 			waitingArgs = args;
 			return;
 		}
 
 		callBack(...args);
 		wait = true;
+		console.log({ wait, args, waitingArgs });
 		setTimeout(timeoutFunction, delay);
 	};
 };

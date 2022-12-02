@@ -1,5 +1,11 @@
 @import "../components/ProjectCard/project-card";
-@import '../components/Header/header';
+@import "../components/Header/header";
 @import "../components/Footer/footer";
 @import "../components/Cards/cards";
 @import "../components/Hobbies/hobbies";
+
+.input {
+	padding: 1.6rem;
+	font-size: 2rem;
+	height: max-content;
+}
