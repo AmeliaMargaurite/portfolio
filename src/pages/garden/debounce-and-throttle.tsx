@@ -4,10 +4,10 @@ import { Layout } from "../../components/Layout";
 import { throttleFunction } from "../../helpers/throttleFunction";
 import { BookCard } from "../../components/BookCard";
 
-const tempUrl = "http://openlibrary.org/search/authors.json?q=twain";
+const tempUrl = "https://openlibrary.org/search/authors.json?q=twain";
 const limit = "&limit=50";
 const authorSearchURL = (term: string) =>
-	`http://openlibrary.org/search/authors.json?q=${term}${limit}`;
+	`https://openlibrary.org/search/authors.json?q=${term}${limit}`;
 const authorsBooksSearchURL = (key: string) =>
 	`https://openlibrary.org/authors/${key}/works.json`;
 const delay = 1500;
