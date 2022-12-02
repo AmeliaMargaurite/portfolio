@@ -22,8 +22,15 @@ const IndexPage = () => {
 			!spinningInfo.current.classList.contains("active")
 		) {
 			spinningInfo.current.classList.add("active");
+
 			setTimeout(() => {
-				spinningInfo.current.classList.remove("active");
+				if (
+					spinningInfo &&
+					spinningInfo.current &&
+					spinningInfo.current.classList.contains("active")
+				) {
+					spinningInfo.current.classList.remove("active");
+				}
 			}, 6000);
 		}
 	}, []);
