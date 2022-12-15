@@ -7,7 +7,6 @@
   "keywords": [
     ""
   ],
-  
   "scripts": {
     "develop": "gatsby develop -H 0.0.0.0",
     "start": "gatsby develop",
@@ -25,12 +24,14 @@
     "gatsby-source-filesystem": "^4.24.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "sass": "^1.55.0"
+    "sass": "^1.55.0",
+    "three": "^0.147.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.45",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "@types/three": "^0.146.0",
     "gh-pages": "^4.0.0",
     "typescript": "^4.8.3"
   }

@@ -12,6 +12,7 @@ export default function Garden() {
 					learning in public.
 				</p>
 				<Link to="/garden/debounce-and-throttle">Debounce and Throttle</Link>
+				<Link to="/garden/threeJS">ThreeJS</Link>
 			</section>
 		</Layout>
 	);

@@ -6,6 +6,14 @@
 	}
 }
 
+.garden__page {
+	& section {
+		background: rgb(31 29 29 / 84%);
+		padding: 3.2rem;
+		line-height: 2;
+	}
+}
+
 .fun {
 	--stroop-color900: rgb(177, 98, 46);
 	--stroop-color800: rgb(250, 244, 232);
